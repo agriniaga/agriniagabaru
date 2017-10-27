@@ -14,4 +14,8 @@ class HomeController extends Controller
     	return view('register');
     }
 
+    public function homepage(){
+    	return view('homepage');
+    }
+
 }
