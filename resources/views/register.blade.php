@@ -35,7 +35,7 @@
           </div>
         </div>
 
-        <div class="form-group{{ $errors->has('username') ? ' has-error' : '' }}" style="margin-top:40px;">				
+        <div class="form-group{{ $errors->has('username') ? ' has-error' : '' }}">				
           <label for="username" class="col-sm-2 control-label">Username</label>
           <div class="col-sm-10">
             <input type="text" class="form-control" id="username" name="username" style="width:50%;" required>                                                  
@@ -47,7 +47,7 @@
           </div>
 		    </div>
 
-			  <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}" style="padding-top:40px;">			
+			  <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">			
           <label for="password" class="col-sm-2 control-label">Password</label>
           <div class="col-sm-10">
             <input type="password" class="form-control" id="password" name="password" style="width:50%;" required>                                                  
@@ -55,7 +55,7 @@
                <script>alert('{{ $errors->first('password') }}')</script>
             @endif
           </div>
-			  </div><br><br>
+			  </div>
 			  <div>
           <center><button class="btn btn-success btn-sm">DAFTAR</button></center>
 			  </div>
