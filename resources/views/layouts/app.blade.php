@@ -1,90 +1,87 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
-  <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-  <title>{{ config('app.name', 'SIM Aset') }}</title>
-  <!-- Tell the browser to be responsive to screen width -->
-  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-  <!-- Bootstrap 3.3.6 -->
-  <link rel="stylesheet" href="{{ url('/bootstrap/css/bootstrap.min.css') }}">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="{{ url('/font-awesome/4.5.0/css/font-awesome.min.css') }}">
-  <!-- DataTables -->
-  <link rel="stylesheet" href="{{ url('/plugins/datatables/dataTables.bootstrap.css') }}">
-  <!-- Theme style -->
-  <link rel="stylesheet" href="{{ url('/dist/css/AdminLTE.min.css') }}">
-  <!-- AdminLTE Skins. Choose a skin from the css/skins
-       folder instead of downloading all of them to reduce the load. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="stylesheet" href="{{ url('/dist/css/skins/_all-skins.min.css') }}">
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    <title>{{ config('app.name', 'Laravel') }}</title>
+
+    <!-- Styles -->
+    <link href="/css/app.css" rel="stylesheet">
+
+    <!-- Scripts -->
     <script>
         window.Laravel = <?php echo json_encode([
             'csrfToken' => csrf_token(),
         ]); ?>
     </script>
-	<title></title>
 </head>
 <body>
-<img src="{{url('image/background.JPEG')}}" style="no-repeat center center fixed;position: fixed;width: 100%;height: 100%;background-size: cover;">
-<header class="main-header"> 
-</header>
-@yield('content')
-<footer class="main-footer">
-  <div class="row" style="margin-top:100px;">
-    <div class="col-sm-1"></div>
-    <div class="col-sm-4">
-      <div class="col-sm-6">
-        <div>
-          <a href="" style="color:green;">Tips Jual Beli</a>
-        </div>
-        <div>
-          <a href="" style="color:green;">Pasang Iklan</a>
-        </div>
-        <div>
-          <a href="" style="color:green;">Sarat dan Ketentuan</a>
-        </div>        
-      </div>
-      <div class="col-sm-6">
-        <div>
-          <a href="" style="color:green;">Tentang Kami</a>
-        </div>
-        <div>
-          <a href="" style="color:green;">Customer Care</a>
-        </div>        
-      </div>
-    </div>
-    <div class="col-sm-1">
-    </div>
-    <div class="col-sm-4">
-      <div class="col-sm-6">
-        <div>
-          <img src="{{url('image/ig.png')}}" width="20px" height="20px"> | <a href="" style="color:black;">agriniaga</a>
-        </div>
-        <div>
-          <img src="{{url('image/twitter.png')}}" width="20px" height="20px"> | <a href="" style="color:black;">@agriniaga01</a>
-        </div>      
-      </div>
-      <div class="col-sm-6">
-        <div>
-          <img src="{{url('image/fb.png')}}" width="20px" height="20px"> | <a href="" style="color:black;">Agriniaga</a>
-        </div>
-        <div>
-          <img src="{{url('image/youtube.png')}}" width="20px" height="20px"> | <a href="" style="color:black;">Agriniaga</a>
-        </div>        
-      </div>      
-    </div>
-    <div class="col-sm-2"></div>
-  </div>  
-</footer>
+    <div id="app">
+        <nav class="navbar navbar-default navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
 
+                    <!-- Collapsed Hamburger -->
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
+                        <span class="sr-only">Toggle Navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
 
-<script src="{{ url('/bootstrap/js/bootstrap.min.js') }}"></script>
-<script src="{{ url('/dist/js/app.min.js') }}"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="{{ url('/dist/js/demo.js') }}"></script>
+                    <!-- Branding Image -->
+                    <a class="navbar-brand" href="{{ url('/') }}">
+                        {{ config('app.name', 'Laravel') }}
+                    </a>
+                </div>
 
+                <div class="collapse navbar-collapse" id="app-navbar-collapse">
+                    <!-- Left Side Of Navbar -->
+                    <ul class="nav navbar-nav">
+                        &nbsp;
+                    </ul>
+
+                    <!-- Right Side Of Navbar -->
+                    <ul class="nav navbar-nav navbar-right">
+                        <!-- Authentication Links -->
+                        @if (Auth::guest())
+                            <li><a href="{{ url('/login') }}">Login</a></li>
+                            <li><a href="{{ url('/register') }}">Register</a></li>
+                        @else
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                </a>
+
+                                <ul class="dropdown-menu" role="menu">
+                                    <li>
+                                        <a href="{{ url('/logout') }}"
+                                            onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                            Logout
+                                        </a>
+
+                                        <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+                                            {{ csrf_field() }}
+                                        </form>
+                                    </li>
+                                </ul>
+                            </li>
+                        @endif
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        @yield('content')
+    </div>
+
+    <!-- Scripts -->
+    <script src="/js/app.js"></script>
 </body>
 </html>

@@ -17,4 +17,7 @@ Route::get('/', function () {
 
 Route::resource('/login', 'HomeController@login');
 Route::resource('/register', 'HomeController@register');
+
 Route::resource('/homepage', 'HomeController@homepage');
+
+Auth::routes();
