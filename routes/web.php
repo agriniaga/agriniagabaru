@@ -16,6 +16,7 @@ Route::get('/', function () {
 });
 
 Route::resource('/homepage', 'HomeController@homepage');
+Route::get('/home', 'HomeController@homepage');
 
 Route::resource('/pencarian', 'HomeController@pencarian');
 Route::resource('/tips', 'HomeController@tips');

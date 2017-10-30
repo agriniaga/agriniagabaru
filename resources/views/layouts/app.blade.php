@@ -1,12 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- CSRF Token -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
+  <title>{{ config('app.name', 'SIM Aset') }}</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.6 -->
+  <link rel="stylesheet" href="{{ url('/bootstrap/css/bootstrap.min.css') }}">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="{{ url('/font-awesome/4.5.0/css/font-awesome.min.css') }}">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="{{ url('/plugins/datatables/dataTables.bootstrap.css') }}">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="{{ url('/dist/css/AdminLTE.min.css') }}">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
 
   <link rel="stylesheet" href="{{ url('/dist/css/skins/_all-skins.min.css') }}">
   <!-- iCheck -->
@@ -28,6 +39,7 @@
             'csrfToken' => csrf_token(),
         ]); ?>
     </script>
+    <title></title>
 </head>
 <body>
 <img src="{{url('image/background.JPEG')}}" style="no-repeat center center fixed;position: fixed;width: 100%;height: 100%;background-size: cover;-webkit-filter: blur(2px);">
@@ -37,13 +49,6 @@
 <footer class="main-footer">
 </footer>
 
-                    <!-- Collapsed Hamburger -->
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
-                        <span class="sr-only">Toggle Navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
 
 <script src="{{ url('/plugins/jQuery/jquery-2.2.3.min.js') }}"></script>
 <!-- Bootstrap 3.3.6 -->
