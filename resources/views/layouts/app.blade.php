@@ -8,7 +8,6 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-<<<<<<< HEAD
   <link rel="stylesheet" href="{{ url('/dist/css/skins/_all-skins.min.css') }}">
   <!-- iCheck -->
   <link rel="stylesheet" href="{{ url('/plugins/iCheck/flat/blue.css') }}">
@@ -24,14 +23,6 @@
   <link rel="stylesheet" href="{{ url('/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css') }}">
 
   <link rel="stylesheet" href="{{ url('/plugins/select2/select2.min.css') }}">
-=======
-    <title>{{ config('app.name', 'Laravel') }}</title>
-
-    <!-- Styles -->
-    <link href="/css/app.css" rel="stylesheet">
-
-    <!-- Scripts -->
->>>>>>> ba3aa178c512ec0a7898a371dd98931292a87345
     <script>
         window.Laravel = <?php echo json_encode([
             'csrfToken' => csrf_token(),
@@ -39,7 +30,6 @@
     </script>
 </head>
 <body>
-<<<<<<< HEAD
 <img src="{{url('image/background.JPEG')}}" style="no-repeat center center fixed;position: fixed;width: 100%;height: 100%;background-size: cover;-webkit-filter: blur(2px);">
 <header class="main-header"> 
 </header>
