@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+@extends('layouts.app')
 
 @section('content')
 <div class="container">
@@ -21,6 +21,7 @@
 	<div class="row" style="padding-top:60px">
 		<div div class="col-sm-3"></div>
 		<div div class="col-sm-5">
+
       <form class="form-horizontal" role="form" method="POST" action="{{ url('/register') }}">
         {{ csrf_field() }}
         <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}" style="margin-top:40px;">       
@@ -64,5 +65,10 @@
 		<div class="col-sm-4"></div>
 	</div>
 </div>
+
+
+  <div class="row" style="margin-top:150px;">  
+    @include('layouts.app2')
+  </div>  
 
 @endsection

@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+@extends('layouts.app')
 
 @section('content')
 <div class="container">
@@ -51,5 +51,9 @@
 		<div class="col-sm-4"></div>
 	</div>
 </div>
+
+  <div class="row" style="margin-top:150px;">
+    @include('layouts.app2')
+  </div>
 
 @endsection

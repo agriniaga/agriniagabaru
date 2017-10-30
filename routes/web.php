@@ -15,9 +15,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('/login', 'HomeController@login');
-Route::resource('/register', 'HomeController@register');
-
-Route::resource('/homepage', 'HomeController@homepage');
-
+//Auth
 Auth::routes();
+
+//Authenticated
+Route::get('/homepage', 'HomeController@homepage');
+Route::get('/home', 'HomeController@homepage');
+Route::get('/pencarian', 'HomeController@pencarian');
+Route::get('/unggahproduk', 'HomeController@unggahproduk');
+
+//Guest
+Route::get('/tips', 'guestController@tips');
+Route::get('/syarat', 'guestController@syarat');

@@ -30,4 +30,12 @@ class HomeController extends Controller
     	return view('homepage');
     }
 
+    public function pencarian(){
+    	return view('pencarian');
+    }
+
+    public function unggahproduk(){
+        return view('unggahproduk');
+    }
+
 }
