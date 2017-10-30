@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.layout')
 
 @section('content')
 <div class="container">
@@ -21,27 +21,46 @@
 	<div class="row" style="padding-top:60px">
 		<div div class="col-sm-3"></div>
 		<div div class="col-sm-5">
-      <div class="form-group">        
-                <label for="nama" class="col-sm-2 control-label">Nama</label>
-                <div class="col-sm-10">
-                  <input type="text" class="form-control" id="nama" name="nama" style="width:50%;" required>                                                  
+
+      <form class="form-horizontal" role="form" method="POST" action="{{ url('/register') }}">
+        {{ csrf_field() }}
+        <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}" style="margin-top:40px;">       
+          <label for="Name" class="col-sm-2 control-label">Name</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="name" name="name" style="width:50%;" required>                                                  
+            @if ($errors->has('name'))
+            <script type="text/javascript">
+              alert('{{ $errors->first('name') }}')
+            </script>
+            @endif
+          </div>
         </div>
-      </div>
-      <div class="form-group" style="margin-top:40px;">       
-                <label for="username" class="col-sm-2 control-label">Username</label>
-                <div class="col-sm-10">
-                  <input type="text" class="form-control" id="username" name="username" style="width:50%;" required>                                                  
-        </div>
-      </div>
-      <div class="form-group" style="padding-top:40px;">      
-                <label for="password" class="col-sm-2 control-label">Password</label>
-                <div class="col-sm-10">
-                  <input type="password" class="form-control" id="password" name="password" style="width:50%;" required>                                                  
-        </div>
-      </div><br><br>
-      <div><center>
-        <button class="btn btn-success btn-sm">DAFTAR</button></center>
-      </div>
+
+        <div class="form-group{{ $errors->has('username') ? ' has-error' : '' }}">				
+          <label for="username" class="col-sm-2 control-label">Username</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="username" name="username" style="width:50%;" required>                                                  
+            @if ($errors->has('username'))
+              <script type="text/javascript">
+                  alert('{{ $errors->first('username') }}')
+              </script>
+            @endif
+          </div>
+		    </div>
+
+			  <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">			
+          <label for="password" class="col-sm-2 control-label">Password</label>
+          <div class="col-sm-10">
+            <input type="password" class="form-control" id="password" name="password" style="width:50%;" required>                                                  
+				    @if ($errors->has('password'))
+               <script>alert('{{ $errors->first('password') }}')</script>
+            @endif
+          </div>
+			  </div>
+			  <div>
+          <center><button class="btn btn-success btn-sm">DAFTAR</button></center>
+			  </div>
+      </form>
 		</div>
 		<div class="col-sm-4"></div>
 	</div>

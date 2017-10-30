@@ -15,10 +15,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('/login', 'HomeController@login');
-Route::resource('/register', 'HomeController@register');
 Route::resource('/homepage', 'HomeController@homepage');
+
 Route::resource('/pencarian', 'HomeController@pencarian');
 Route::resource('/tips', 'HomeController@tips');
 Route::resource('/syarat', 'HomeController@syarat');
 Route::resource('/unggahproduk', 'HomeController@unggahproduk');
+
+Auth::routes();
