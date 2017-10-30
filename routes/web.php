@@ -15,12 +15,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('/homepage', 'HomeController@homepage');
-Route::get('/home', 'HomeController@homepage');
-
-Route::resource('/pencarian', 'HomeController@pencarian');
-Route::resource('/tips', 'HomeController@tips');
-Route::resource('/syarat', 'HomeController@syarat');
-Route::resource('/unggahproduk', 'HomeController@unggahproduk');
-
+//Auth
 Auth::routes();
+
+//Authenticated
+Route::get('/homepage', 'HomeController@homepage');
+Route::get('/home', 'HomeController@homepage');
+Route::get('/pencarian', 'HomeController@pencarian');
+Route::get('/unggahproduk', 'HomeController@unggahproduk');
+
+
+//Guest
+Route::get('/tips', 'guestController@tips');
+Route::get('/syarat', 'guestController@syarat');

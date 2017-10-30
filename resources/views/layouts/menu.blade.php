@@ -11,7 +11,17 @@
               <li class="header"><a href="">Profil</a></li>
               <li><a href="">Produk Saya</a></li>
               <li><a href="">Pengaturan</a></li>
-              <li><a href="">Keluar</a></li>
+              <li>
+                <a href="{{ url('/logout') }}"
+                    onclick="event.preventDefault();
+                             document.getElementById('logout-form').submit();">
+                    Keluar
+                </a>
+
+                <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+                    {{ csrf_field() }}
+                </form>
+              </li>
             </ul>
           </li>
           <li>

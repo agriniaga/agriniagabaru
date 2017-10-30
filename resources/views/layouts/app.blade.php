@@ -39,7 +39,7 @@
             'csrfToken' => csrf_token(),
         ]); ?>
     </script>
-    <title></title>
+    <title>AgriNiaga</title>
 </head>
 <body>
 <img src="{{url('image/background.JPEG')}}" style="no-repeat center center fixed;position: fixed;width: 100%;height: 100%;background-size: cover;-webkit-filter: blur(2px);">

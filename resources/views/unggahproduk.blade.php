@@ -68,4 +68,8 @@
   </div>
 </div>
 
+<div class="row" style="margin-top:150px;">
+    @include('layouts.app2')
+  </div>
+
 @endsection
