@@ -21,12 +21,6 @@
 	<div class="row" style="padding-top:60px">
 		<div div class="col-sm-3"></div>
 		<div div class="col-sm-5">
-			<div class="form-group">				
-              	<label for="nama" class="col-sm-2 control-label">Nama</label>
-              	<div class="col-sm-10">
-                	<input type="text" class="form-control" id="nama" name="nama" style="width:50%;" required>                                                  
-				</div>
-			</div>
 			<div class="form-group" style="margin-top:40px;">				
               	<label for="username" class="col-sm-2 control-label">Username</label>
               	<div class="col-sm-10">
@@ -40,11 +34,15 @@
 				</div>
 			</div><br><br>
 			<div><center>
-				<button class="btn btn-success btn-sm">DAFTAR</button></center>
+				<button class="btn btn-success btn-sm">MASUK</button></center>
 			</div>
 		</div>
 		<div class="col-sm-4"></div>
 	</div>
 </div>
+
+  <div class="row" style="margin-top:150px;">
+    @include('layouts.app2')
+  </div>
 
 @endsection

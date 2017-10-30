@@ -20,6 +20,20 @@
        folder instead of downloading all of them to reduce the load. -->
 
   <link rel="stylesheet" href="{{ url('/dist/css/skins/_all-skins.min.css') }}">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="{{ url('/plugins/iCheck/flat/blue.css') }}">
+  <!-- Morris chart -->
+  <link rel="stylesheet" href="{{ url('/plugins/morris/morris.css') }}">
+  <!-- jvectormap -->
+  <link rel="stylesheet" href="{{ url('/plugins/jvectormap/jquery-jvectormap-1.2.2.css') }}">
+  <!-- Date Picker -->
+  <link rel="stylesheet" href="{{ url('/plugins/datepicker/datepicker3.css') }}">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="{{ url('/plugins/daterangepicker/daterangepicker.css') }}">
+  <!-- bootstrap wysihtml5 - text editor -->
+  <link rel="stylesheet" href="{{ url('/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css') }}">
+
+  <link rel="stylesheet" href="{{ url('/plugins/select2/select2.min.css') }}">
     <script>
         window.Laravel = <?php echo json_encode([
             'csrfToken' => csrf_token(),
@@ -28,63 +42,43 @@
 	<title></title>
 </head>
 <body>
-<img src="{{url('image/background.JPEG')}}" style="no-repeat center center fixed;position: fixed;width: 100%;height: 100%;background-size: cover;">
+<img src="{{url('image/background.JPEG')}}" style="no-repeat center center fixed;position: fixed;width: 100%;height: 100%;background-size: cover;-webkit-filter: blur(2px);">
 <header class="main-header"> 
 </header>
 @yield('content')
 <footer class="main-footer">
-  <div class="row" style="margin-top:100px;">
-    <div class="col-sm-1"></div>
-    <div class="col-sm-4">
-      <div class="col-sm-6">
-        <div>
-          <a href="" style="color:green;">Tips Jual Beli</a>
-        </div>
-        <div>
-          <a href="" style="color:green;">Pasang Iklan</a>
-        </div>
-        <div>
-          <a href="" style="color:green;">Sarat dan Ketentuan</a>
-        </div>        
-      </div>
-      <div class="col-sm-6">
-        <div>
-          <a href="" style="color:green;">Tentang Kami</a>
-        </div>
-        <div>
-          <a href="" style="color:green;">Customer Care</a>
-        </div>        
-      </div>
-    </div>
-    <div class="col-sm-1">
-    </div>
-    <div class="col-sm-4">
-      <div class="col-sm-6">
-        <div>
-          <img src="{{url('image/ig.png')}}" width="20px" height="20px"> | <a href="" style="color:black;">agriniaga</a>
-        </div>
-        <div>
-          <img src="{{url('image/twitter.png')}}" width="20px" height="20px"> | <a href="" style="color:black;">@agriniaga01</a>
-        </div>      
-      </div>
-      <div class="col-sm-6">
-        <div>
-          <img src="{{url('image/fb.png')}}" width="20px" height="20px"> | <a href="" style="color:black;">Agriniaga</a>
-        </div>
-        <div>
-          <img src="{{url('image/youtube.png')}}" width="20px" height="20px"> | <a href="" style="color:black;">Agriniaga</a>
-        </div>        
-      </div>      
-    </div>
-    <div class="col-sm-2"></div>
-  </div>  
 </footer>
 
 
+<script src="{{ url('/plugins/jQuery/jquery-2.2.3.min.js') }}"></script>
+<!-- Bootstrap 3.3.6 -->
 <script src="{{ url('/bootstrap/js/bootstrap.min.js') }}"></script>
+<!-- DataTables -->
+<script src="{{ url('/plugins/datatables/jquery.dataTables.min.js') }}"></script>
+<script src="{{ url('/plugins/datatables/dataTables.bootstrap.min.js') }}"></script>
+<!-- Slimscroll -->
+<script src="{{ url('/plugins/slimScroll/jquery.slimscroll.min.js') }}"></script>
+<!-- FastClick -->
+<script src="{{ url('/plugins/fastclick/fastclick.js') }}"></script>
+<!-- AdminLTE App -->
 <script src="{{ url('/dist/js/app.min.js') }}"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="{{ url('/dist/js/demo.js') }}"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
 
+
+<script src="{{ url('/plugins/morris/morris.min.js') }}"></script>
+<!-- Sparkline -->
+<script src="{{ url('/plugins/sparkline/jquery.sparkline.min.js') }}"></script>
+<!-- jvectormap -->
+<script src="{{ url('/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js') }}"></script>
+<script src="{{ url('/plugins/jvectormap/jquery-jvectormap-world-mill-en.js') }}"></script>
+<!-- jQuery Knob Chart -->
+<script src="{{ url('/plugins/knob/jquery.knob.js') }}"></script>
+<!-- Bootstrap WYSIHTML5 -->
+<script src="{{ url('/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js') }}"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<!-- Select2 -->
+<script src="{{ url('/plugins/select2/select2.full.min.js') }}"></script>
 </body>
 </html>
