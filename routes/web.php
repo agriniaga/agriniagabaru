@@ -24,7 +24,6 @@ Route::get('/home', 'HomeController@homepage');
 Route::get('/pencarian', 'HomeController@pencarian');
 Route::get('/unggahproduk', 'HomeController@unggahproduk');
 
-
 //Guest
 Route::get('/tips', 'guestController@tips');
 Route::get('/syarat', 'guestController@syarat');
