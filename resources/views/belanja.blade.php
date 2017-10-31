@@ -9,66 +9,60 @@
     @include('layouts.menu')
   </div> 
   <div class="row" style="margin-top:20px;">
-
-      <div class="col-sm-4 col-sm-offset-2">
-        <div class="row">
-          <label for="nama_produk" class="col-sm-4 control-label">Nama Produk</label>
-          <div class="col-sm-7">
-            <input type="text" class="form-control" id="nama_produk" name="nama_produk" style="width:100%" required>     
-          </div>
-        </div>
-        <div class="row">
-          <label for="harga" class="col-sm-4 control-label">Harga</label>
-          <div class="col-sm-7">
-            <input type="text" class="form-control" id="harga" name="harga" style="width:100%" required>     
-          </div>
-        </div>
-        <div class="row">
-          <label for="kontak" class="col-sm-4 control-label">Kontak</label>
-          <div class="col-sm-7">
-            <input type="text" class="form-control" id="kontak" name="kontak" style="width:100%" required>     
-          </div>
-        </div>
-        <div class="row">
-          <label for="kategori" class="col-sm-4 control-label">Kategori</label>
-          <div class="col-sm-7">
-            <select id="kategori" class="form-control" style="width:100%">
-              <option value="pertanian">Pertanian</option>
-            </select>   
-          </div>
-        </div>
-        <div class="row">
-          <label for="provinsi" class="col-sm-4 control-label">Provinsi</label>
-          <div class="col-sm-7">
-            <select id="provinsi" class="form-control" style="width:100%">
-              <option value="Sumatera Barat">Sumatera Barat</option>
-            </select>   
-          </div>
-        </div>
-        <div class="row">
-          <label for="kategori" class="col-sm-4 control-label">Deskripsi</label>
-          <div class="col-sm-7">
-            <textarea class="form-control" style="width:100%"></textarea> 
-          </div>
-        </div><br>
-        <div class="row">
-          <button type="submit" name="submit" class="btn btn-success pull-left col-sm-2 col-sm-offset-4">Selesai</button>          
+    <form method="">
+      <div class="col-sm-6 col-sm-offset-1">
+        <div class="box" style="border:none;width:100%;height:100%;">          
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <td width="1%"><b><center>No</center></b></td>
+                <td><b><center>Nama Barang</center></b></td>
+                <td><b><center>Harga</center></b></td>
+                <td><b><center>Jumlah Barang</center></b></td>
+                <td width="1%"><b><center>Pilihan</center></b></td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><center>1</center></td>
+                <td>Jagung Manis</td>
+                <td>Rp. 1.000.000</td>
+                <td><center>1</center></td>
+                <td><button class="btn btn-sm btn-success">Batal</button></td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
-      <div class="col-sm-2">
-          <div class="row" style="color:green;margin-left:1px;">
-            <input type="file" id="exampleInputFile">
+      <div class="col-sm-3">
+        <div class="box" style="border:none;width:100%;height:100%;">
+          <div style="padding-top:2px;">
+            <center><h4 style="color:red;">Pembayaran <span class="fa fa-cart-arrow-down"></span></h4></center>
           </div>
-        <div class="box" style="height:200px;width:200px;border:none;margin-left:1px;">
-          <div class="row">
-            <img src="{{url('image/background.JPEG')}}" style="height:180px;width:180px;margin-left:25px;margin-top:10px;">            
-          </div>
+          <table class="table table-striped">
+            <tr>
+              <td>Total</td>
+              <td>:</td>
+              <td>Rp. 1.000.000</td>
+            </tr>
+            <tr>
+              <td>Diskon</td>
+              <td>:</td>
+              <td>10 %</td>
+            </tr>
+            <tr>
+              <td>Total Bayar</td>
+              <td>:</td>
+              <td>Rp. 900.000</td>
+            </tr>
+          </table>
+          <center><button type="submit" class="btn btn-success" style="margin:2px;">Pesan</button></center>
+          
         </div>
       </div>
     {{ csrf_field() }}
     <!-- /.box-footer -->
   </form>
-
 </div>
   </div>
 </div>

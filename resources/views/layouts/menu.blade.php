@@ -26,8 +26,9 @@
             </a>
           </li>
           <li>
-            <a href="#" style="color:green;">
+            <a href="{{url('/belanja')}}" style="color:green;">
               Belanja
+              <span class="pull-right-container"><small class="label pull-right bg-red">1</small></span>
             </a>
           </li>
 
