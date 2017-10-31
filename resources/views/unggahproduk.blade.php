@@ -12,6 +12,7 @@
 
       <div class="col-sm-4 col-sm-offset-2">
         <div class="row">
+          <label for="nama_produk" class="col-sm-4 control-label">Nama Produk</label>
           <div class="col-sm-7">
             <input type="text" class="form-control" id="nama_produk" name="nama_produk" style="width:100%" required>     
           </div>
