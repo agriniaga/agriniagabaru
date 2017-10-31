@@ -9,7 +9,7 @@
     @include('layouts.menu')
   </div> 
   <div class="row" style="margin-top:20px;">
-      <form method="">
+
       <div class="col-sm-4 col-sm-offset-2">
         <div class="row">
           <label for="nama_produk" class="col-sm-4 control-label">Nama Produk</label>
