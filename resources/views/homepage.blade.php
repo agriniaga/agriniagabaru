@@ -20,7 +20,7 @@
         <div class="col-sm-12" style="height:40px">
           <div class="box" style="width:100%;height:100%;padding:1px;border:0;">
             <span class="fa fa-search" style="width:5%;padding-left:10px;padding-right:10px;margin-top:10px;"></span> 
-            <input type="text" style="border:none;width:30%;" placeholder="Cari Produk"> | 
+            <input type="text" style="border:none;width:31%;" placeholder="Cari Produk"> | 
             <select style="border:none;width:25%;">
               <option style="display: none;" selected>Provinsi</option>
               <option>Sumatera Barat</option></select> | 
