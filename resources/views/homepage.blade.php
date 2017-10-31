@@ -17,22 +17,30 @@
 	<div class="row" style="padding-top:60px">
 		<div div class="col-sm-2"></div>
 		<div div class="col-sm-8">
+      <form method="post" action="{{url('produk/search')}}">
+        {{ csrf_field() }}
         <div class="col-sm-12" style="height:40px">
           <div class="box" style="width:100%;height:100%;padding:1px;border:0;">
             <span class="fa fa-search" style="width:5%;padding-left:10px;padding-right:10px;margin-top:10px;"></span> 
-            <input type="text" style="border:none;width:30%;" placeholder="Cari Produk"> | 
-            <select style="border:none;width:25%;">
-              <option style="display: none;" selected>Provinsi</option>
-              <option>Sumatera Barat</option></select> | 
-            <select style="border:none;width:25%;">
-              <option style="display: none;" selected>Kategori</option>
-              <option>Pertanian</option>
+            <input name="nama" type="text" style="border:none;width:30%;" placeholder="Cari Produk"> | 
+            <select name="provinsi" style="border:none;width:25%;">
+              <option style="display: none;" value="0" selected>Provinsi</option>
+              @foreach($provinsi as $p)
+                <option value="{{$p->id}}">{{$p->nama}}</option>
+              @endforeach
+            </select> | 
+            <select name="kategori" style="border:none;width:25%;">
+              <option style="display: none;" value="0" selected>Kategori</option>
+              @foreach($kategori as $k)
+                <option value="{{$k->id}}">{{$k->nama}}</option>
+              @endforeach
             </select>
-            <button class="btn btn-success" style="width:10%;">
+            <button name="submit" class="btn btn-success" style="width:10%;">
               <span class="fa fa-search"></span>
             </button>
           </div>                                               
-        </div>  
+        </div>
+      </form>  
 		</div>
 		<div class="col-sm-2"></div>
 	</div>
