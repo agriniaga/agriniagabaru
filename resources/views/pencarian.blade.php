@@ -26,17 +26,18 @@
             <div class="box" style="border:0;margin-bottom:5px;">
               <div style="padding-left:3%;padding-right:3%;padding-top:1%;padding-bottom:1%;">
                 <p style="padding:none;"><h5>{{$p->nama}}</h5>
-                <h5 style="color:green">{{$p->id_provinsi}}</h5>
-                <h5 style="color:green">{{$p->id_kategori}}</h5></p>
+                <h5 style="color:green">{{App\Provinsi::find($p->id_provinsi)->nama}}</h5>
+                <h5 style="color:green">{{App\Provinsi::find($p->id_provinsi)->nama}}</h5></p>
                 <div>
                   <p><h4>Rp. {{$p->harga}},-/{{$p->satuan}}</h4></p>
+                  <p><h4>Diskon : Rp. {{$p->diskon}},-</h4></p>
                 </div>
               </div>            
             </div>
-            <div class="box" style="border:0;height:65px;">
+            <div class="box" style="border:0;">
               <div class="row" style="padding-left:3%;padding-right:3%;padding-top:1%;padding-bottom:1%;">
                 <div class="col-sm-7">
-                  <p style="color:green"><b>Bambang</b><br>WA : 081271545023 <br> BBM : 123ABC</p>
+                  <p style="color:green"><b>{{Auth::user()->name}}</b><br>WA : {{Auth::user()->hp}} <br>WA : {{Auth::user()->line}} <br>WA : {{Auth::user()->wa}} <br> BBM : {{Auth::user()->bbm}}</p>
                 </div>
                 <div class="col-sm-5">
                   <a href="" style="color:green">Kirim Pesan</a>

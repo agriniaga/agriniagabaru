@@ -14,7 +14,7 @@ class Produk extends Model
     }
 
     public function joinProvinsi(){
-    	return $this->belongsTo('App\Provinsi','id_provinsi');
+    	return $this->belongsTo('App\provinsi','id_provinsi');
     }
 
     public function joinUser(){
