@@ -38,4 +38,8 @@ class HomeController extends Controller
         return view('belanja');
     }
 
+    public function profil(){
+        return view('profil');
+    }
+
 }

@@ -10,7 +10,7 @@
   </div> 
   <div class="row" style="margin-top:20px;">
     <form method="">
-      <div class="col-sm-6 col-sm-offset-1">
+      <div class="col-sm-7 col-sm-offset-1">
         <div class="box" style="border:none;width:100%;height:100%;">          
           <table class="table table-striped">
             <thead>
@@ -19,6 +19,8 @@
                 <td><b><center>Nama Barang</center></b></td>
                 <td><b><center>Harga</center></b></td>
                 <td><b><center>Jumlah Barang</center></b></td>
+                <td><b><center>Diskon</center></b></td>
+                <td><b><center>Total</center></b></td>
                 <td width="1%"><b><center>Pilihan</center></b></td>
               </tr>
             </thead>
@@ -28,6 +30,8 @@
                 <td>Jagung Manis</td>
                 <td>Rp. 1.000.000</td>
                 <td><center>1</center></td>
+                <td><center>10%</center></td>
+                <td>Rp. 900.000</td>
                 <td><button class="btn btn-sm btn-success">Batal</button></td>
               </tr>
             </tbody>
@@ -41,19 +45,9 @@
           </div>
           <table class="table table-striped">
             <tr>
-              <td>Total</td>
+              <td>Total Belanja</td>
               <td>:</td>
               <td>Rp. 1.000.000</td>
-            </tr>
-            <tr>
-              <td>Diskon</td>
-              <td>:</td>
-              <td>10 %</td>
-            </tr>
-            <tr>
-              <td>Total Bayar</td>
-              <td>:</td>
-              <td>Rp. 900.000</td>
             </tr>
           </table>
           <center><button type="submit" class="btn btn-success" style="margin:2px;">Pesan</button></center>

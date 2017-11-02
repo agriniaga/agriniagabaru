@@ -8,7 +8,7 @@
               John
             </a>
             <ul class="dropdown-menu">
-              <li class="header"><a href="">Profil</a></li>
+              <li class="header"><a href="{{url('/profil')}}">Profil</a></li>
               <li><a href="">Produk Saya</a></li>
               <li><a href="#myModal" data-toggle="modal">Buka Toko</a></li>
               <li><a href="">Pengaturan</a></li>

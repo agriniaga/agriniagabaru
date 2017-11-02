@@ -23,3 +23,4 @@ Route::resource('/tips', 'HomeController@tips');
 Route::resource('/syarat', 'HomeController@syarat');
 Route::resource('/unggahproduk', 'HomeController@unggahproduk');
 Route::resource('/belanja', 'HomeController@belanja');
+Route::resource('/profil', 'HomeController@profil');
