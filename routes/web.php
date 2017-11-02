@@ -20,9 +20,15 @@ Auth::routes();
 
 //Authenticated
 Route::get('/homepage', 'HomeController@homepage');
-Route::get('/home', 'HomeController@homepage');
-Route::get('/pencarian', 'HomeController@pencarian');
 Route::get('/unggahproduk', 'HomeController@unggahproduk');
+
+//pencarian
+Route::get('/pencarian', function(){
+	return redirect('/homepage');
+});
+Route::get('/pencarian/{provinsi}/{kategori}/{nama_produk}','produkController@searchWithName');
+Route::get('/pencarian/{provinsi}/{kategori}','produkController@searchWithoutName');
+Route::post('/produk/search', 'produkController@produkSearch');
 
 //Guest
 Route::get('/tips', 'guestController@tips');

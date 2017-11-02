@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Provinsi;
+use App\Kategori;
 
 class HomeController extends Controller
 {
@@ -27,7 +29,9 @@ class HomeController extends Controller
     }
 
     public function homepage(){
-    	return view('homepage');
+        $provinsi = Provinsi::all();
+        $kategori = Kategori::all();
+    	return view('homepage',compact('provinsi','kategori'));
     }
 
     public function pencarian(){

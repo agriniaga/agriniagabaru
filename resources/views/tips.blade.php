@@ -12,9 +12,13 @@
     <hr style="width:80%; background-color: green; height: 1px; border: 0;position:relative;">
   </div>
   <div class="row">
+    @if(Auth::guest())
     <div class="col-sm-3 col-md-offset-9" style="font-size:20px;">
       <b style="color:green;"><a href="{{url('/register')}}" style="color:green;">Daftar</a> | <a href="{{url('/login')}}" style="color:green;">Masuk</a></b>
     </div>
+    @else
+      @include('layouts.menu')
+    @endif
   </div> 
 	<div class="row" style="padding-top:40px;color:green;">
     <div class="col-md-10 col-md-offset-2">
