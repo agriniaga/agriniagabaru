@@ -8,4 +8,8 @@ class Provinsi extends Model
 {
     protected $table = "provinsi";
     public $timestamps = false; 
+
+    public function joinProduk(){
+    	return $this->hasMany('App\produk','id_provinsi');
+    }
 }

@@ -26,4 +26,8 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function joinProduk(){
+        return $this->belongsTo('App\Produk','id_produk');
+    }
 }
