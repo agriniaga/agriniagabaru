@@ -103,9 +103,10 @@
                 var jam2 = date.getHours();
                 var menit2 = date.getMinutes();
                 var detik2 = date.getSeconds();
+                var hari2 = date.getDay();
                 var current_minutes = mins-1;
                 seconds--;
-                hari.innerHTML = Math.floor(seconds/86400);
+                hari.innerHTML = Math.floor(15 - hari2);
                 jam.innerHTML = Math.floor(24 - jam2);
                 menit.innerHTML = Math.floor(60 - menit2);
                 detik.innerHTML = Math.floor(60 - detik2);
