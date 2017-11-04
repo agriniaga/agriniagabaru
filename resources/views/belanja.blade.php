@@ -2,16 +2,16 @@
 
 @section('content')
 <div class="container">
-  <div class="row">    
+  <div class="row">
     @include('layouts.head')
   </div>
   <div class="row">
     @include('layouts.menu')
-  </div> 
+  </div>
   <div class="row" style="margin-top:20px;">
     <form method="">
       <div class="col-sm-7 col-sm-offset-1">
-        <div class="box" style="border:none;width:100%;height:100%;">          
+        <div class="box" style="border:none;width:100%;height:100%;">
           <table class="table table-striped">
             <thead>
               <tr>
@@ -32,7 +32,7 @@
                 <td><center>1</center></td>
                 <td><center>10%</center></td>
                 <td>Rp. 900.000</td>
-                <td><button class="btn btn-sm btn-success">Batal</button></td>
+                <td><button class="btn btn-sm btn-danger">Batal</button></td>
               </tr>
             </tbody>
           </table>
@@ -51,7 +51,7 @@
             </tr>
           </table>
           <center><button type="submit" class="btn btn-success" style="margin:2px;">Pesan</button></center>
-          
+
         </div>
       </div>
     {{ csrf_field() }}

@@ -1,17 +1,16 @@
 
-    <div class="col-sm-6 col-sm-offset-5" style="font-size:20px;">
+    <div class="col-sm-7 col-sm-offset-4" style="font-size:20px;">
       <b style="color:green;" class="pull-right">
       <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
           <li>
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color:green;">
-              John
+              Akun
             </a>
             <ul class="dropdown-menu">
               <li class="header"><a href="{{url('/profil')}}">Profil</a></li>
-              <li><a href="">Produk Saya</a></li>
+              <li><a href="{{url('/produk')}}">Produk Saya</a></li>
               <li><a href="#myModal" data-toggle="modal">Buka Toko</a></li>
-              <li><a href="">Pengaturan</a></li>
               <li><a href="">Keluar</a></li>
             </ul>
           </li>
@@ -29,6 +28,12 @@
             <a href="{{url('/belanja')}}" style="color:green;">
               Belanja
               <span class="pull-right-container"><small class="label pull-right bg-red">1</small></span>
+            </a>
+          </li>
+          <li>
+            <a href="{{url('/pemesanan')}}" style="color:green;">
+              Pemesanan
+              <span class="pull-right-container"><small class="label pull-right bg-red">2</small></span>
             </a>
           </li>
 
@@ -100,10 +105,10 @@
                                     <td>:</td>
                                     <td>
                                     <div>
-                                      <img src="{{url('image/background.JPEG')}}" style="width:200px;width:200px;">                                      
+                                      <img src="{{url('image/background.JPEG')}}" style="width:200px;">
                                     </div><br>
                                     <div>
-                                      <input type="file" class="form-control">                                      
+                                      <input type="file" class="form-control">
                                     </div>
                                     </td>
                                 </tr>
@@ -117,7 +122,7 @@
                 </form>
                 <!-- footer modal -->
                 <div class="modal-footer">
-                    
+
                 </div>
             </div>
         </div>

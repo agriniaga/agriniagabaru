@@ -13,17 +13,17 @@
   </div>
   <div class="row">
   @include('layouts.menu')
-  </div> 
+  </div>
 	<div class="row" style="padding-top:60px">
 		<div div class="col-sm-2"></div>
 		<div div class="col-sm-8">
         <div class="col-sm-12" style="height:40px">
           <div class="box" style="width:100%;height:100%;padding:1px;border:0;">
-            <span class="fa fa-search" style="width:5%;padding-left:10px;padding-right:10px;margin-top:10px;"></span> 
-            <input type="text" style="border:none;width:31%;" placeholder="Cari Produk"> | 
+            <span class="fa fa-search" style="width:5%;padding-left:10px;padding-right:10px;margin-top:10px;"></span>
+            <input type="text" style="border:none;width:30%;" placeholder="Cari Produk"> | 
             <select style="border:none;width:25%;">
               <option style="display: none;" selected>Provinsi</option>
-              <option>Sumatera Barat</option></select> | 
+              <option>Sumatera Barat</option></select> |
             <select style="border:none;width:25%;">
               <option style="display: none;" selected>Kategori</option>
               <option>Pertanian</option>
@@ -31,8 +31,8 @@
             <button class="btn btn-success" style="width:10%;">
               <span class="fa fa-search"></span>
             </button>
-          </div>                                               
-        </div>  
+          </div>
+        </div>
 		</div>
 		<div class="col-sm-2"></div>
 	</div>
@@ -50,7 +50,7 @@
         </div>
         <div>
           <a href="" style="color:green;">Sarat dan Ketentuan</a>
-        </div>        
+        </div>
       </div>
       <div class="col-sm-6">
         <div>
@@ -58,7 +58,7 @@
         </div>
         <div>
           <a href="" style="color:green;">Customer Care</a>
-        </div>        
+        </div>
       </div>
     </div>
     <div class="col-sm-0">
@@ -70,7 +70,7 @@
         </div>
         <div>
           <img src="{{url('image/twitter.png')}}" width="20px" height="20px"> | <a href="" style="color:black;">@agriniaga01</a>
-        </div>      
+        </div>
       </div>
       <div class="col-sm-6">
         <div>
@@ -78,8 +78,8 @@
         </div>
         <div>
           <img src="{{url('image/youtube.png')}}" width="20px" height="20px"> | <a href="" style="color:black;">Agriniaga</a>
-        </div>        
-      </div>      
+        </div>
+      </div>
     </div>
     <div class="col-sm-2"></div>
   </div>

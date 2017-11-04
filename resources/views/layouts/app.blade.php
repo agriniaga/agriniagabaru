@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
   <title>{{ config('app.name', 'SIM Aset') }}</title>
@@ -42,8 +42,8 @@
 	<title></title>
 </head>
 <body>
-<img src="{{url('image/background.JPEG')}}" style="no-repeat center center fixed;position: fixed;width: 100%;height: 100%;background-size: cover;-webkit-filter: blur(2px);">
-<header class="main-header"> 
+<img src="{{url('image/background.JPEG')}}" style="no-repeat center center fixed;position: fixed;width: 100%;height: 100%;background-size: cover;-webkit-filter: blur(1px);">
+<header class="main-header">
 </header>
 @yield('content')
 <footer class="main-footer">

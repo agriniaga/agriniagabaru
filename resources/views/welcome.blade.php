@@ -75,7 +75,7 @@
                 </div>
 
                     <div class="title m-b-md"><b>
-                        WEBSITE UNDER MAINTENANCE IN 
+                        WEBSITE UNDER MAINTENANCE IN
                         <div>
                             <i id="hari"></i> Days
                             <i id="jam"></i> Hours
@@ -93,7 +93,7 @@
             var seconds = setdetik;
             var mins = minutes
             function tick() {
-                //elemen dengan id= counter bisa diganti sesuka hati 
+                //elemen dengan id= counter bisa diganti sesuka hati
                 var hari = document.getElementById("hari");
                 var jam = document.getElementById("jam");
                 var menit = document.getElementById("menit");
@@ -113,7 +113,7 @@
                     setTimeout(tick, 1000);
                 } else {
                     if(mins > 1){
-                        countdown(mins-1);           
+                        countdown(mins-1);
                     }
                 }
             }
@@ -121,6 +121,6 @@
         }
         countdown(2592000);
     </script>
-    
+
     </body>
 </html>
