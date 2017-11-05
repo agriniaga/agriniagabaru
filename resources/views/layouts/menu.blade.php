@@ -1,5 +1,5 @@
 
-    <div class="col-sm-7 col-sm-offset-4" style="font-size:20px;">
+    <div class="col-sm-9 col-sm-offset-2" style="font-size:20px;">
       <b style="color:green;" class="pull-right">
       <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
@@ -11,7 +11,7 @@
               <li class="header"><a href="{{url('/profil')}}">Profil</a></li>
               <li><a href="{{url('/produk')}}">Produk Saya</a></li>
               <li><a href="#myModal" data-toggle="modal">Buka Toko</a></li>
-              <li><a href="">Keluar</a></li>
+              <li><a href="#">Keluar</a></li>
             </ul>
           </li>
           <li>
@@ -34,6 +34,11 @@
             <a href="{{url('/pemesanan')}}" style="color:green;">
               Pemesanan
               <span class="pull-right-container"><small class="label pull-right bg-red">2</small></span>
+            </a>
+          </li>
+          <li>
+            <a href="{{url('/manajemenakun')}}" style="color:green;">
+              Manajemen Akun
             </a>
           </li>
 
@@ -120,10 +125,6 @@
                     </div>
                         {{ csrf_field() }}
                 </form>
-                <!-- footer modal -->
-                <div class="modal-footer">
-
-                </div>
             </div>
         </div>
     </div>
