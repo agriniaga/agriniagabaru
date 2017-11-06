@@ -13,7 +13,7 @@
   </div>
   <div class="row">
   @include('layouts.menu')
-  </div> 
+  </div>
 	<div class="row" style="padding-top:60px">
 		<div div class="col-sm-2"></div>
 		<div div class="col-sm-8">

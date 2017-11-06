@@ -42,4 +42,20 @@ class HomeController extends Controller
         return view('unggahproduk');
     }
 
+    public function belanja(){
+        return view('belanja');
+    }
+
+    public function profil(){
+        return view('profil');
+    }
+
+    public function produk(){
+        return view('produk');
+    }
+
+    public function pemesanan(){
+        return view('pemesanan');
+    }
+
 }

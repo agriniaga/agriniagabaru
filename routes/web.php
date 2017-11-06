@@ -20,7 +20,10 @@ Auth::routes();
 
 //Authenticated
 Route::get('/homepage', 'HomeController@homepage');
-Route::get('/unggahproduk', 'HomeController@unggahproduk');
+
+//Guest
+Route::get('/tips', 'guestController@tips');
+Route::get('/syarat', 'guestController@syarat');
 
 //pencarian
 Route::get('/pencarian', function(){
@@ -30,6 +33,11 @@ Route::get('/pencarian/{provinsi}/{kategori}/{nama_produk}','produkController@se
 Route::get('/pencarian/{provinsi}/{kategori}','produkController@searchWithoutName');
 Route::post('/produk/search', 'produkController@produkSearch');
 
-//Guest
-Route::get('/tips', 'guestController@tips');
-Route::get('/syarat', 'guestController@syarat');
+//arif
+Route::resource('/unggahproduk', 'HomeController@unggahproduk');
+Route::resource('/belanja', 'HomeController@belanja');
+Route::resource('/profil', 'HomeController@profil');
+Route::resource('/produk', 'HomeController@produk');
+Route::resource('/pemesanan', 'HomeController@pemesanan');
+
+Route::resource('/manajemenakun', 'AdminController@manajemenakun');
