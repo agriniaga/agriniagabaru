@@ -46,7 +46,8 @@ class HomeController extends Controller
     }
 
     public function belanja(){
-        return view('belanja');
+        $keranjang = Auth::user()->keranjangKu();
+        return view('belanja',compact('keranjang'));
     }
 
     public function profil(){

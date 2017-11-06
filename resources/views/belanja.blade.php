@@ -25,15 +25,18 @@
               </tr>
             </thead>
             <tbody>
+              @php($no=1)
+              @foreach($keranjang as $k)
               <tr>
-                <td><center>1</center></td>
-                <td>Jagung Manis</td>
-                <td>Rp. 1.000.000</td>
-                <td><center>1</center></td>
-                <td><center>10%</center></td>
-                <td>Rp. 900.000</td>
+                <td><center>{{$no}}</center></td>
+                <td>{{$k->joinProduk->nama}}</td>
+                <td>Rp. {{$k->joinProduk->harga}}</td>
+              <td><center>{{$k->jumlah}}</center></td>
+                <td><center>{{$k->joinProduk->diskon}}%</center></td>
+                <td>Rp. {{$k->hargaBayar()}}</td>
                 <td><button class="btn btn-sm btn-danger">Batal</button></td>
               </tr>
+              @endforeach
             </tbody>
           </table>
         </div>

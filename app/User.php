@@ -30,4 +30,10 @@ class User extends Authenticatable
     public function joinProduk(){
         return $this->belongsTo('App\Produk','id_produk');
     }
+
+    public function keranjangKu(){
+        $bucket = Keranjang::where('id_pembeli',$this->id)
+                    ->where('status',0)->get();
+        return $bucket;
+    }
 }

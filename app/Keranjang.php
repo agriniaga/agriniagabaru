@@ -27,6 +27,9 @@ class Keranjang extends Model
     }
 
     public function hargaBayar(){
-    	return $this->joinProduk->harga - $this->joinProduk->diskon;
+    	$harga = $this->joinProduk->harga * $this->jumlah;
+        $harga= $harga - $this->joinProduk->diskon;
+        return $harga;
     }
+
 }
