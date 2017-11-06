@@ -33,9 +33,14 @@ Route::get('/pencarian/{provinsi}/{kategori}/{nama_produk}','produkController@se
 Route::get('/pencarian/{provinsi}/{kategori}','produkController@searchWithoutName');
 Route::post('/produk/search', 'produkController@produkSearch');
 
+//pemesanan
+Route::post('/pesan', 'HomeController@pesan');
+Route::get('/belanja', 'HomeController@belanja');
+Route::post('/batalpesan', 'HomeController@batalpesan');
+
+
 //arif
 Route::resource('/unggahproduk', 'HomeController@unggahproduk');
-Route::resource('/belanja', 'HomeController@belanja');
 Route::resource('/profil', 'HomeController@profil');
 Route::resource('/produk', 'HomeController@produk');
 Route::resource('/pemesanan', 'HomeController@pemesanan');

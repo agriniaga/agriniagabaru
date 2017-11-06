@@ -5,7 +5,7 @@
         <ul class="nav navbar-nav">
           <li>
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color:green;">
-              {{Auth::user()->name}}
+              Akun
             </a>
             <ul class="dropdown-menu">
               <li class="header"><a href="{{url('/profil')}}">Profil</a></li>
@@ -37,7 +37,7 @@
           <li>
             <a href="{{url('/belanja')}}" style="color:green;">
               Belanja
-              <span class="pull-right-container"><small class="label pull-right bg-red">1</small></span>
+              <span class="pull-right-container"><small class="label pull-right bg-red">{{count(Auth::user()->keranjangKu())}}</small></span>
             </a>
           </li>
           <li>
