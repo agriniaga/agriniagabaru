@@ -28,7 +28,7 @@
                 <div class="row" style="margin-left:10px;margin-right:10px;">
                   <p style="padding:none;"><h5>{{$p->nama}}</h5>
                   <h5 style="color:green">{{App\Provinsi::find($p->id_provinsi)->nama}}</h5>
-                  <h5 style="color:green">{{App\Provinsi::find($p->id_provinsi)->nama}}</h5></p>
+                  <h5 style="color:green">{{App\Kategori::find($p->id_kategori)->nama}}</h5></p>
                 </div>
                 <div class="row" style="margin-left:10px;margin-right:10px;">
                   <label class="pull-left"><h4>Rp. {{$p->harga}},-/{{$p->satuan}}</h4></label>
@@ -42,7 +42,7 @@
                   <p style="color:green"><b>{{Auth::user()->name}}</b><br>WA : {{Auth::user()->wa}} <br> BBM : {{Auth::user()->bbm}}</p>
                 </div>
                 <div class="col-sm-4">
-                  <a href="#jumlahpesan" class="btn btn-success" data-toggle="modal">Pesan</a>
+                  <a href="#jumlahpesan" data-id="{{$p->id}}" class="btn btn-success btn-pesan" onclick="pesan(this)" data-toggle="modal">Pesan</a>
                 </div>
               </div>
             </div>
@@ -66,14 +66,15 @@
                   <h4 class="modal-title"><center>Jumlah</center></h4>
               </div>
               <!-- body modal -->
-              <form action="" method="post" class="form-horizontal">
+              <form action="{{url('pesan')}}" method="post" class="form-horizontal">
                   <div class="modal-body">
-                    <input type="number" name="jumlahpesan" value="1" class="form-control">
+                    <input type="hidden" name="id_produk" id="id_produk" value="1" class="form-control">
+                    <input type="number" name="jumlahpesan" name="jumlahpesan" value="1" class="form-control">
                   </div>
               <!-- footer modal -->
               <div class="modal-footer">
                   <button data-dismiss="modal" class="btn btn-danger pull-left">Batal</button>
-                  <button type="button" class="btn btn-success pull-right">Pesan</button>
+                  <input type="submit" class="btn btn-success pull-right" value="Pesan">
 
                     {{ csrf_field() }}
                 </form>
@@ -81,5 +82,13 @@
           </div>
       </div>
   </div>
+
+<script type="text/javascript">
+  function pesan(produk) {
+    var id_produk = produk.getAttribute('data-id');
+    document.getElementById('id_produk').value = id_produk;
+  }
+</script>
+
 
 @endsection

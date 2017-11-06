@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Provinsi;
 use App\Kategori;
+use Carbon\Carbon;
+use App\Keranjang;
+use Auth;
 
 class HomeController extends Controller
 {
@@ -56,6 +59,19 @@ class HomeController extends Controller
 
     public function pemesanan(){
         return view('pemesanan');
+    }
+
+    public function pesan(Request $request){
+        $keranjang = new keranjang();
+        $keranjang->tanggal = Carbon::now()->toDateString();
+        $keranjang->id_pembeli = Auth::user()->id;
+        $keranjang->no = $keranjang->lastNumber();
+        $keranjang->id_produk = $request->id_produk;
+        $keranjang->jumlah = $request->jumlahpesan;
+        $keranjang->status = 0;
+        $keranjang->save();
+
+        return redirect()->back();
     }
 
 }

@@ -33,6 +33,10 @@ Route::get('/pencarian/{provinsi}/{kategori}/{nama_produk}','produkController@se
 Route::get('/pencarian/{provinsi}/{kategori}','produkController@searchWithoutName');
 Route::post('/produk/search', 'produkController@produkSearch');
 
+//pemesanan
+Route::post('/pesan', 'HomeController@pesan');
+
+
 //arif
 Route::resource('/unggahproduk', 'HomeController@unggahproduk');
 Route::resource('/belanja', 'HomeController@belanja');
