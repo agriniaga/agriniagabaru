@@ -75,4 +75,11 @@ class HomeController extends Controller
         return redirect()->back();
     }
 
+    public function batalpesan(Request $request){
+        $keranjang = keranjang::find($request->id);
+        $keranjang->delete();
+
+        return redirect()->back();
+    }
+
 }

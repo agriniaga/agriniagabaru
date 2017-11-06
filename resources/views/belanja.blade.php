@@ -28,13 +28,19 @@
               @php($no=1)
               @foreach($keranjang as $k)
               <tr>
-                <td><center>{{$no}}</center></td>
+                <td><center>{{$no++}}</center></td>
                 <td>{{$k->joinProduk->nama}}</td>
-                <td>Rp. {{$k->joinProduk->harga}}</td>
+                <td>Rp. {{number_format($k->joinProduk->harga,0,'.','.')}}</td>
               <td><center>{{$k->jumlah}}</center></td>
                 <td><center>{{$k->joinProduk->diskon}}%</center></td>
-                <td>Rp. {{$k->hargaBayar()}}</td>
-                <td><button class="btn btn-sm btn-danger">Batal</button></td>
+                <td>Rp. {{number_format($k->hargaBayar(),0,'.','.')}}</td>
+                <td>
+                  <form method="post" action="{{url('batalpesan')}}">
+                    {{ csrf_field() }}
+                    <input type="hidden" name="id" value="{{$k->id}}">
+                    <button type="submit" class="btn btn-sm btn-danger">Batal</button>
+                  </form>
+                </td>
               </tr>
               @endforeach
             </tbody>
@@ -50,7 +56,7 @@
             <tr>
               <td>Total Belanja</td>
               <td>:</td>
-              <td>Rp. 1.000.000</td>
+              <td>Rp. {{number_format(Auth::user()->totalKeranjangKu(),0,'.','.')}}</td>
             </tr>
           </table>
           <center><button type="submit" class="btn btn-success" style="margin:2px;">Pesan</button></center>

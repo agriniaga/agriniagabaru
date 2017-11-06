@@ -37,7 +37,7 @@
           <li>
             <a href="{{url('/belanja')}}" style="color:green;">
               Belanja
-              <span class="pull-right-container"><small class="label pull-right bg-red">1</small></span>
+              <span class="pull-right-container"><small class="label pull-right bg-red">{{count(Auth::user()->keranjangKu())}}</small></span>
             </a>
           </li>
           <li>

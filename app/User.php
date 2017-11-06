@@ -36,4 +36,14 @@ class User extends Authenticatable
                     ->where('status',0)->get();
         return $bucket;
     }
+
+    public function totalKeranjangKu(){
+        $bucket = Keranjang::where('id_pembeli',$this->id)
+                    ->where('status',0)->get();
+        $total = 0;
+        foreach ($bucket as $key) {
+            $total += $key->hargaBayar();
+        }
+        return $total;
+    }
 }
