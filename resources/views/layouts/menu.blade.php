@@ -5,7 +5,7 @@
         <ul class="nav navbar-nav">
           <li>
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color:green;">
-              {{Auth::user()->name}}
+              Akun
             </a>
             <ul class="dropdown-menu">
               <li class="header"><a href="{{url('/profil')}}">Profil</a></li>

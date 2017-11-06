@@ -10,7 +10,7 @@
   </div>
   <div class="row">
     <div class="col-sm-10 col-sm-offset-2" style="padding-top:10px">
-     <h3 style="color:red"><b>Hasil Pencarian : {{$nama}} </b></h3>     
+     <h3 style="color:red"><b>Hasil Pencarian : {{$nama}} </b></h3>
     </div>
   </div>
   @foreach($produk as $p)
@@ -31,12 +31,12 @@
                   <h5 style="color:green">{{App\Provinsi::find($p->id_provinsi)->nama}}</h5></p>
                 </div>
                 <div class="row" style="margin-left:10px;margin-right:10px;">
-                  <p><h4>Rp. {{$p->harga}},-/{{$p->satuan}}</h4></p>
-                  <p><h4>Diskon : Rp. {{$p->diskon}},-</h4></p>
+                  <label class="pull-left"><h4>Rp. {{$p->harga}},-/{{$p->satuan}}</h4></label>
+                  <label class="pull-right"><h4><b>Diskon {{$p->diskon}}%</b></h4></label>
                 </div>
               </div>
             </div>
-            <div class="box" style="border:0;">
+            <div class="box" style="border:0;height:65px;">
               <div class="row" style="padding-left:3%;padding-right:3%;padding-top:1%;padding-bottom:1%;">
                 <div class="col-sm-8">
                   <p style="color:green"><b>{{Auth::user()->name}}</b><br>WA : {{Auth::user()->wa}} <br> BBM : {{Auth::user()->bbm}}</p>
@@ -55,9 +55,6 @@
   @endforeach
 </div>
 
-<div class="row" style="margin-top:150px;">
-    @include('layouts.app2')
-</div>
 
   <div id="jumlahpesan" class="modal fade modal-success" role="dialog">
       <div class="modal-dialog" style="width:12%">
@@ -84,3 +81,5 @@
           </div>
       </div>
   </div>
+
+@endsection
