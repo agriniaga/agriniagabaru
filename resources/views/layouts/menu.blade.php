@@ -9,7 +9,9 @@
             </a>
             <ul class="dropdown-menu">
               <li class="header"><a href="{{url('/profil')}}">Profil</a></li>
+              @if(Auth::user()->role==1)
               <li><a href="{{url('/produk')}}">Produk Saya</a></li>
+              @endif
               @if(Auth::user()->role==0)
               <li><a href="#myModal" data-toggle="modal">Buka Toko</a></li>
               @endif
@@ -72,7 +74,7 @@
                     <h4 class="modal-title"><center>Buka Toko</center></h4>
                 </div>
                 <!-- body modal -->
-                <form action="" method="post" class="form-horizontal">
+                <form action="{{url('bukatoko')}}" method="post" class="form-horizontal">
                     <div class="modal-body">
                             <table class="table">
                                 <tr>
@@ -103,20 +105,20 @@
                                 <tr>
                                     <td>No HP</td>
                                     <td>:</td>
-                                    <td><input type="text" class="form-control" id="hp" name="hp"></td>
+                                    <td><input type="text" class="form-control" id="hp" name="hp" value="{{Auth::user()->wa}}"></td>
                                 </tr>
                                 <tr>
                                     <td>Email</td>
                                     <td>:</td>
-                                    <td><input type="email" class="form-control" id="email" name="email"></td>
+                                    <td><input type="email" class="form-control" id="email" name="email" value="{{Auth::user()->email}}"></td>
                                 </tr>
                                 <tr>
                                     <td>Kategori Toko</td>
                                     <td>:</td>
                                     <td>
                                       <select class="form-control" id="toko" name="toko">
-                                        <option>Ruko</option>
-                                        <option>Warteg</option>
+                                        <option value="1">Ruko</option>
+                                        <option value="2">Warteg</option>
                                       </select>
                                     </td>
                                 </tr>

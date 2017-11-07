@@ -42,6 +42,7 @@ Route::post('/order', 'HomeController@order');
 //profil
 Route::get('/profil', 'HomeController@profil');
 Route::post('/updateprofil', 'HomeController@updateprofil');
+Route::post('/bukatoko', 'HomeController@bukatoko');
 
 //arif
 Route::resource('/unggahproduk', 'HomeController@unggahproduk');

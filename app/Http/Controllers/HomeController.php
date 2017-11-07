@@ -103,4 +103,21 @@ class HomeController extends Controller
         return redirect('profil');
     }
 
+    public function bukatoko(Request $request){
+        $datauser = User::find(Auth::user()->id);
+
+        $datauser->role = 1;
+        $datauser->nama_toko = $request->nama_toko;
+        $datauser->npwp = $request->npwp;
+        $datauser->ktp = $request->ktp;
+        $datauser->telp_toko = $request->telp;
+        $datauser->wa = $request->hp;
+        $datauser->email_toko = $request->email;
+        $datauser->kategori_toko = $request->kategori;
+        $datauser->foto_toko = "";
+        $datauser->save();
+
+        return redirect('homepage');
+    }
+
 }
