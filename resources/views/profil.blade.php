@@ -38,7 +38,7 @@
               <div class="row" style="margin-bottom: 5px;">
                 <label for="no_hp2" class="col-sm-2 control-label">No Hp</label>
                 <div class="col-sm-10">
-                  <input type="text" class="form-control" id="no_hp2" name="no_hp2" style="width:100%;border:none;" value="{{Auth::user()->no_hp}}" required>     
+                  <input type="text" class="form-control" id="no_hp2" name="no_hp2" style="width:100%;border:none;" value="{{Auth::user()->wa}}" required>     
                 </div>
               </div>
               <div class="row" style="margin-bottom: 5px;">
@@ -50,7 +50,7 @@
               <div class="row" style="margin-bottom: 5px;">
                 <label for="pekerjaan" class="col-sm-2 control-label">Pekerjaan</label>
                 <div class="col-sm-10">
-                  <input type="text" class="form-control" id="pekerjaan" name="pekerjaan" style="width:100%;border:none;" value="{{Auth::user()->pekerjaan}}" required>     
+                  <input type="text" class="form-control" id="pekerjaan2" name="pekerjaan2" style="width:100%;border:none;" value="{{Auth::user()->pekerjaan}}" required>     
                 </div>
               </div><br>
               <div class="row" style="margin-bottom: 5px;">
