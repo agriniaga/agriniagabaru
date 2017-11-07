@@ -52,4 +52,40 @@ class User extends Authenticatable
         $product = Produk::where('id_user',$this->id)->get();
         return $product;
     }
+
+    public function checkPendingOrder(){
+        $pesanan = \DB::table('keranjang')
+        ->join('produk','produk.id','=','keranjang.id_produk')
+        ->where('produk.id_user','=',$this->id)
+        ->where('keranjang.status','=','1')
+        ->select('keranjang.id_pembeli','keranjang.no')
+        ->groupBy('keranjang.id_pembeli','keranjang.no')
+        ->get();
+        return $pesanan;
+    }
+
+    public function checkOrder(){
+        $pesanan = \DB::table('keranjang')
+        ->join('produk','produk.id','=','keranjang.id_produk')
+        ->where('produk.id_user','=',$this->id)
+        ->where('keranjang.status','<>',0)
+        ->select('keranjang.id_pembeli','keranjang.no','keranjang.status')
+        ->groupBy('keranjang.id_pembeli','keranjang.no','keranjang.status')
+        ->orderBy('keranjang.status','asc')
+        ->get();
+        return $pesanan;
+    }
+
+    public function showOrder($pembeli,$keranjang){
+        $keranjang = \DB::table('keranjang')
+        ->join('produk','produk.id','=','keranjang.id_produk')
+        ->join('users','keranjang.id_pembeli','=','users.id')
+        ->where('keranjang.id_pembeli',$pembeli)
+        ->where('keranjang.no',$keranjang)
+        ->select('users.name','produk.nama','keranjang.tanggal','keranjang.jumlah','keranjang.status')
+        ->orderBy('keranjang.tanggal','desc')
+        ->get();
+
+        return $keranjang;
+    }
 }

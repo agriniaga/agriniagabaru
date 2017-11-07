@@ -32,8 +32,18 @@ class HomeController extends Controller
         return view('home');
     }
 
+    public function homepage(){
+        $provinsi = Provinsi::all();
+        $kategori = Kategori::all();
+    	return view('homepage',compact('provinsi','kategori'));
+    }
+
     public function pencarian(){
     	return view('pencarian');
+    }
+
+    public function unggahproduk(){
+        return view('unggahproduk');
     }
 
     public function belanja(){
@@ -46,8 +56,7 @@ class HomeController extends Controller
     }
 
     public function pemesanan(){
-        $pesan = Auth::user()->checkOrder();
-        return view('pemesanan',compact('pesan'));
+        return view('pemesanan');
     }
 
     public function pesan(Request $request){
@@ -106,17 +115,5 @@ class HomeController extends Controller
 
         return redirect('homepage');
     }
-
-    public function confirmOrder(Request $request){
-        $order = Keranjang::where('id_pembeli',$request->id_pembeli)
-                    ->where('no',$request->no)->get();
-        foreach ($order as $key) {
-            $key->status=2;
-            $key->save();   
-         }
-
-         return redirect('pemesanan');
-    }
-
 
 }

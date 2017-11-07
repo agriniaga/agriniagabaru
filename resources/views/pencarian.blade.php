@@ -39,7 +39,7 @@
             <div class="box" style="border:0;height:65px;">
               <div class="row" style="padding-left:3%;padding-right:3%;padding-top:1%;padding-bottom:1%;">
                 <div class="col-sm-8">
-                  <p style="color:green"><b>{{Auth::user()->name}}</b><br>WA : {{Auth::user()->wa}} <br> BBM : {{Auth::user()->bbm}}</p>
+                  <p style="color:green"><b>{{App\User::find($p->id_user)->name}}</b><br>WA : {{App\User::find($p->id_user)->wa}}<br> BBM : {{App\User::find($p->id_user)->bbm}}</p>
                 </div>
                 <div class="col-sm-4">
                   <a href="#jumlahpesan" data-id="{{$p->id}}" class="btn btn-success btn-pesan" onclick="pesan(this)" data-toggle="modal">Pesan</a>

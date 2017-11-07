@@ -11,15 +11,16 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('login');
+// });
+Route::get('/', 'guestController@homepage');
 
 //Auth
 Auth::routes();
 
 //Authenticated
-Route::get('/homepage', 'HomeController@homepage');
+Route::get('/homepage', 'guestController@homepage');
 
 //Guest
 Route::get('/tips', 'guestController@tips');
@@ -38,6 +39,8 @@ Route::post('/pesan', 'HomeController@pesan');
 Route::get('/belanja', 'HomeController@belanja');
 Route::post('/batalpesan', 'HomeController@batalpesan');
 Route::post('/order', 'HomeController@order');
+Route::get('/pemesanan', 'HomeController@pemesanan');
+Route::post('/confirmorder', 'HomeController@confirmOrder');
 
 //profil
 Route::get('/profil', 'HomeController@profil');
@@ -53,6 +56,5 @@ Route::post('/storeproduk', 'produkController@storeproduk');
 Route::post('/editproduk', 'produkController@editproduk');
 
 //arif
-Route::resource('/pemesanan', 'HomeController@pemesanan');
 
 Route::resource('/manajemenakun', 'AdminController@manajemenakun');

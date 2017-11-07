@@ -9,13 +9,15 @@
             </a>
             <ul class="dropdown-menu">
               <li class="header"><a href="{{url('/profil')}}">Profil</a></li>
-              @if(Auth::user()->role==1)
-              <li><a href="{{url('/produk')}}">Produk Saya</a></li>
-              @endif
-              @if(Auth::user()->role==0)
-              <li><a href="#myModal" data-toggle="modal">Buka Toko</a></li>
-              @endif
-              <li>
+              @if(Auth::check())
+                @if(Auth::user()->role==1)
+                <li><a href="{{url('/produk')}}">Produk Saya</a></li>
+                @endif
+                @if(Auth::user()->role==0)
+                <li><a href="#myModal" data-toggle="modal">Buka Toko</a></li>
+                @endif
+
+                <li>
                 <a href="{{ url('/logout') }}"
                     onclick="event.preventDefault();
                              document.getElementById('logout-form').submit();">
@@ -26,6 +28,13 @@
                     {{ csrf_field() }}
                 </form>
               </li>
+
+              @else
+                <li><a href="{{url('/produk')}}">Produk Saya</a></li>
+                <li><a href="{{url('/login')}}">Login</a></li>
+              @endif
+
+              
             </ul>
           </li>
           <li>
@@ -33,31 +42,53 @@
               Home
             </a>
           </li>
-          @if(Auth::user()->role==1)
-          <li>
-            <a href="{{url('/unggahproduk')}}" style="color:green;">
-              Unggah Produk
-            </a>
-          </li>
+          @if(Auth::check())
+            @if(Auth::user()->role==1)
+            <li>
+              <a href="{{url('/unggahproduk')}}" style="color:green;">
+                Unggah Produk
+              </a>
+            </li>
+            @endif
           @endif
           <li>
             <a href="{{url('/belanja')}}" style="color:green;">
               Belanja
-              <span class="pull-right-container"><small class="label pull-right bg-red">{{count(Auth::user()->keranjangKu()) }}</small></span>
+              <span class="pull-right-container">
+                @if(Auth::check())
+                <small class="label pull-right bg-red">
+                {{count(Auth::user()->keranjangKu()) }}
+                </small>
+                @endif
+            </span>
             </a>
           </li>
           <li>
+            @if(Auth::check())
+              @if(Auth::user()->id==1)
+              <a href="{{url('/pemesanan')}}" style="color:green;">
+                Pemesanan
+                <span class="pull-right-container">
+                  <small class="label pull-right bg-red">
+                  {{count(Auth::user()->checkPendingOrder()) }}
+                  </small>
+                </span>
+              </a>
+              @endif
+            @else
             <a href="{{url('/pemesanan')}}" style="color:green;">
-              Pemesanan
-              <span class="pull-right-container"><small class="label pull-right bg-red">2</small></span>
-            </a>
+                Pemesanan
+              </a>
+            @endif
           </li>
+          @if(Auth::check())
           @if(Auth::user()->role ==2)
           <li>
             <a href="{{url('/manajemenakun')}}" style="color:green;">
               Manajemen Akun
             </a>
           </li>
+          @endif
           @endif
         </ul>
       </div>
@@ -105,12 +136,20 @@
                                 <tr>
                                     <td>No HP</td>
                                     <td>:</td>
+                                    @if(Auth::check())
                                     <td><input type="text" class="form-control" id="hp" name="hp" value="{{Auth::user()->wa}}"></td>
+                                    @else
+                                    <td><input type="text" class="form-control" id="hp" name="hp" value=""></td>
+                                    @endif
                                 </tr>
                                 <tr>
                                     <td>Email</td>
                                     <td>:</td>
+                                    @if(Auth::check())
                                     <td><input type="email" class="form-control" id="email" name="email" value="{{Auth::user()->email}}"></td>
+                                    @else
+                                    <td><input type="email" class="form-control" id="email" name="email" value=""></td>
+                                    @endif
                                 </tr>
                                 <tr>
                                     <td>Kategori Toko</td>
