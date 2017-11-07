@@ -16,7 +16,7 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name', 'username', 'password','role','wa','bbm','alamat','email','pekerjaan',
-        'nama_toko', 'alamat_toko', 'npwp','ktp','telp_toko','alamat','email_toko','kategori_toko','foto_toko',
+        'nama_toko', 'alamat_toko', 'npwp','ktp','telp_toko','email_toko','kategori_toko','foto_toko',
     ];
 
     /**
@@ -46,5 +46,10 @@ class User extends Authenticatable
             $total += $key->hargaBayar();
         }
         return $total;
+    }
+
+    public function myProduct(){
+        $product = Produk::where('id_user',$this->id)->get();
+        return $product;
     }
 }

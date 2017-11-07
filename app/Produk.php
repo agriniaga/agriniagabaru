@@ -10,7 +10,7 @@ class Produk extends Model
     public $timestamps = false; 
 
     public function joinKategori(){
-    	return $this->belongsTo('App\Kategori','id_produk');
+    	return $this->belongsTo('App\Kategori','id_kategori');
     }
 
     public function joinProvinsi(){

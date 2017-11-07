@@ -31,7 +31,7 @@
                   <h5 style="color:green">{{App\Kategori::find($p->id_kategori)->nama}}</h5></p>
                 </div>
                 <div class="row" style="margin-left:10px;margin-right:10px;">
-                  <label class="pull-left"><h4>Rp. {{$p->harga}},-/{{$p->satuan}}</h4></label>
+                  <label class="pull-left"><h4>Rp. {{$p->harga}},-/kg</h4></label>
                   <label class="pull-right"><h4><b>Diskon {{$p->diskon}}%</b></h4></label>
                 </div>
               </div>

@@ -44,9 +44,15 @@ Route::get('/profil', 'HomeController@profil');
 Route::post('/updateprofil', 'HomeController@updateprofil');
 Route::post('/bukatoko', 'HomeController@bukatoko');
 
+//produk
+Route::get('/produk', 'produkController@produk');
+Route::get('/produk/{id}', 'produkController@productAPI');
+Route::post('/hapusproduk', 'produkController@hapusproduk');
+Route::get('/unggahproduk', 'HomeController@unggahproduk');
+Route::post('/stroreproduk', 'HomeController@storeproduk');
+Route::post('/editproduk', 'produkController@editproduk');
+
 //arif
-Route::resource('/unggahproduk', 'HomeController@unggahproduk');
-Route::resource('/produk', 'HomeController@produk');
 Route::resource('/pemesanan', 'HomeController@pemesanan');
 
 Route::resource('/manajemenakun', 'AdminController@manajemenakun');

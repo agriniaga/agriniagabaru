@@ -18,7 +18,7 @@
           <option style="display: none;" selected>Kategori</option>
           <option>Pertanian</option>
         </select>
-        <button class="btn btn-success" style="width:10%; margin-bottom:1px;">
+        <button class="btn btn-success" style="width:8%; margin-bottom:1px;">
           <span class="fa fa-search"></span>
         </button>
       </div>

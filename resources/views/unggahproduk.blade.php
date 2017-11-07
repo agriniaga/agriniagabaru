@@ -9,36 +9,24 @@
     @include('layouts.menu')
   </div>
   <div class="row" style="margin-top:20px;">
-      <form method="">
+      <form method="{{url('storeproduk')}}">
       <div class="col-sm-4 col-sm-offset-2">
         <div class="row">
           <label for="nama_produk" class="col-sm-4 control-label">Nama Produk</label>
           <div class="col-sm-7">
-            <input type="text" class="form-control" id="nama_produk" name="nama_produk" style="width:100%" required>
+            <input type="text" class="form-control" id="nama" name="nama" style="width:100%" required>
           </div>
         </div>
         <div class="row">
           <label for="harga" class="col-sm-4 control-label">Harga</label>
           <div class="col-sm-7">
-            <input type="text" class="form-control" id="harga" name="harga" style="width:100%" required>
+            <input type="number" class="form-control" id="harga" name="harga" style="width:100%" required>
           </div>
         </div>
         <div class="row">
           <label for="harga" class="col-sm-4 control-label">Diskon (%)</label>
           <div class="col-sm-7">
-            <input type="text" class="form-control" id="diskon" name="diskon" style="width:100%" required>
-          </div>
-        </div>
-        <div class="row">
-          <label for="wa" class="col-sm-4 control-label">WA</label>
-          <div class="col-sm-7">
-            <input type="text" class="form-control" id="wa" name="wa" style="width:100%" required>
-          </div>
-        </div>
-        <div class="row">
-          <label for="bbm" class="col-sm-4 control-label">BBM</label>
-          <div class="col-sm-7">
-            <input type="text" class="form-control" id="bbm" name="bbm" style="width:100%" required>
+            <input type="number" class="form-control" id="diskon" name="diskon" style="width:100%" required>
           </div>
         </div>
         <div class="row">
