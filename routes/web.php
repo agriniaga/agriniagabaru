@@ -48,8 +48,8 @@ Route::post('/bukatoko', 'HomeController@bukatoko');
 Route::get('/produk', 'produkController@produk');
 Route::get('/produk/{id}', 'produkController@productAPI');
 Route::post('/hapusproduk', 'produkController@hapusproduk');
-Route::get('/unggahproduk', 'HomeController@unggahproduk');
-Route::post('/stroreproduk', 'HomeController@storeproduk');
+Route::get('/unggahproduk', 'produkController@unggahproduk');
+Route::post('/storeproduk', 'produkController@storeproduk');
 Route::post('/editproduk', 'produkController@editproduk');
 
 //arif

@@ -9,7 +9,7 @@
     @include('layouts.menu')
   </div>
   <div class="row" style="margin-top:20px;">
-      <form method="{{url('storeproduk')}}">
+      <form action="{{url('storeproduk')}}" method="post">
       <div class="col-sm-4 col-sm-offset-2">
         <div class="row">
           <label for="nama_produk" class="col-sm-4 control-label">Nama Produk</label>
@@ -20,35 +20,39 @@
         <div class="row">
           <label for="harga" class="col-sm-4 control-label">Harga</label>
           <div class="col-sm-7">
-            <input type="number" class="form-control" id="harga" name="harga" style="width:100%" required>
+            <input type="text" class="form-control" id="harga" name="harga" style="width:100%" required>
           </div>
         </div>
         <div class="row">
           <label for="harga" class="col-sm-4 control-label">Diskon (%)</label>
           <div class="col-sm-7">
-            <input type="number" class="form-control" id="diskon" name="diskon" style="width:100%" required>
+            <input type="text" class="form-control" id="diskon" name="diskon" style="width:100%" required>
           </div>
         </div>
         <div class="row">
           <label for="kategori" class="col-sm-4 control-label">Kategori</label>
           <div class="col-sm-7">
-            <select id="kategori" class="form-control" style="width:100%">
-              <option value="pertanian">Pertanian</option>
+            <select id="kategori" name="kategori" class="form-control" style="width:100%">
+              @foreach($Kategori as $kat)
+              <option value="{{$kat->id}}">{{$kat->nama}}</option>
+              @endforeach
             </select>
           </div>
         </div>
         <div class="row">
           <label for="provinsi" class="col-sm-4 control-label">Provinsi</label>
           <div class="col-sm-7">
-            <select id="provinsi" class="form-control" style="width:100%">
-              <option value="Sumatera Barat">Sumatera Barat</option>
+            <select id="provinsi" name="provinsi" class="form-control" style="width:100%">
+              @foreach($Provinsi as $prov)
+              <option value="{{$prov->id}}">{{$prov->nama}}</option>
+              @endforeach
             </select>
           </div>
         </div>
         <div class="row">
           <label for="kategori" class="col-sm-4 control-label">Deskripsi</label>
           <div class="col-sm-7">
-            <textarea class="form-control" style="width:100%"></textarea>
+            <textarea class="form-control" style="width:100%" name="deskripsi" id="deskripsi"></textarea>
           </div>
         </div><br>
         <div class="row">
@@ -73,6 +77,4 @@
   </div>
 </div>
 
-<div class="row" style="margin-top:150px;">
-    @include('layouts.app2')
-</div>
+@endsection

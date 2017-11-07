@@ -79,6 +79,25 @@ class produkController extends Controller
         return redirect('produk');
     }
 
+    public function unggahproduk(){
+        $Kategori = Kategori::all();
+        $Provinsi = Provinsi::all();
+        return view('unggahproduk',compact('Kategori','Provinsi'));
+    }
+
+    public function storeproduk(Request $request){
+        $Produk = new Produk();
+        $Produk->nama = $request->nama;
+        $Produk->harga = $request->harga;
+        $Produk->diskon = $request->diskon;
+        $Produk->id_user = Auth::user()->id;
+        $Produk->id_provinsi = $request->provinsi;
+        $Produk->id_kategori = $request->kategori;
+        $Produk->deskripsi = $request->deskripsi;
+        $Produk->save();
+        return redirect('produk');
+    }
+
     public function productAPI($id){
         $produk = Produk::find($id);
         return $produk;
