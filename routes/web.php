@@ -55,6 +55,9 @@ Route::get('/unggahproduk', 'produkController@unggahproduk');
 Route::post('/storeproduk', 'produkController@storeproduk');
 Route::post('/editproduk', 'produkController@editproduk');
 
-//arif
-
-Route::resource('/manajemenakun', 'AdminController@manajemenakun');
+//akun
+Route::get('/manajemenakun', 'AdminController@manajemenAkun');
+Route::post('/hapusakun', 'AdminController@hapusAkun');
+Route::post('/verfikasiakun', 'AdminController@verifikasiAkun');
+Route::post('/editakun', 'AdminController@editAkun');
+Route::get('/toko/{id}', 'AdminController@akunAPI');

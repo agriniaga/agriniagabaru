@@ -93,7 +93,7 @@ class HomeController extends Controller
     public function bukatoko(Request $request){
         $datauser = User::find(Auth::user()->id);
 
-        $datauser->role = 1;
+        $datauser->role = 2;
         $datauser->nama_toko = $request->nama_toko;
         $datauser->npwp = $request->npwp;
         $datauser->ktp = $request->ktp;

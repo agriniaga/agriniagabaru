@@ -82,7 +82,7 @@
             @endif
           </li>
           @if(Auth::check())
-          @if(Auth::user()->role ==2)
+          @if(Auth::user()->role ==100)
           <li>
             <a href="{{url('/manajemenakun')}}" style="color:green;">
               Manajemen Akun
