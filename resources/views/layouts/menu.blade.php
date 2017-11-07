@@ -10,7 +10,9 @@
             <ul class="dropdown-menu">
               <li class="header"><a href="{{url('/profil')}}">Profil</a></li>
               <li><a href="{{url('/produk')}}">Produk Saya</a></li>
+              @if(Auth::user()->role==0)
               <li><a href="#myModal" data-toggle="modal">Buka Toko</a></li>
+              @endif
               <li>
                 <a href="{{ url('/logout') }}"
                     onclick="event.preventDefault();
@@ -29,15 +31,17 @@
               Home
             </a>
           </li>
+          @if(Auth::user()->role==1)
           <li>
             <a href="{{url('/unggahproduk')}}" style="color:green;">
               Unggah Produk
             </a>
           </li>
+          @endif
           <li>
             <a href="{{url('/belanja')}}" style="color:green;">
               Belanja
-              <span class="pull-right-container"><small class="label pull-right bg-red">{{count(Auth::user()->keranjangKu())}}</small></span>
+              <span class="pull-right-container"><small class="label pull-right bg-red">{{count(Auth::user()->keranjangKu()) }}</small></span>
             </a>
           </li>
           <li>
@@ -46,12 +50,13 @@
               <span class="pull-right-container"><small class="label pull-right bg-red">2</small></span>
             </a>
           </li>
+          @if(Auth::user()->role ==2)
           <li>
             <a href="{{url('/manajemenakun')}}" style="color:green;">
               Manajemen Akun
             </a>
           </li>
-
+          @endif
         </ul>
       </div>
       </b>

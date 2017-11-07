@@ -37,11 +37,14 @@ Route::post('/produk/search', 'produkController@produkSearch');
 Route::post('/pesan', 'HomeController@pesan');
 Route::get('/belanja', 'HomeController@belanja');
 Route::post('/batalpesan', 'HomeController@batalpesan');
+Route::post('/order', 'HomeController@order');
 
+//profil
+Route::get('/profil', 'HomeController@profil');
+Route::post('/updateprofil', 'HomeController@updateprofil');
 
 //arif
 Route::resource('/unggahproduk', 'HomeController@unggahproduk');
-Route::resource('/profil', 'HomeController@profil');
 Route::resource('/produk', 'HomeController@produk');
 Route::resource('/pemesanan', 'HomeController@pemesanan');
 

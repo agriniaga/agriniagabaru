@@ -59,7 +59,12 @@
               <td>Rp. {{number_format(Auth::user()->totalKeranjangKu(),0,'.','.')}}</td>
             </tr>
           </table>
-          <center><button type="submit" class="btn btn-success" style="margin:2px;">Pesan</button></center>
+          <center>
+            <form method="post" action="{{url('order')}}">
+              {{ csrf_field() }}
+              <button type="submit" class="btn btn-success" style="margin:2px;">Pesan</button>
+            </form>
+          </center>
 
         </div>
       </div>

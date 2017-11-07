@@ -8,6 +8,7 @@ use App\Kategori;
 use Carbon\Carbon;
 use App\Keranjang;
 use Auth;
+use App\User;
 
 class HomeController extends Controller
 {
@@ -80,6 +81,26 @@ class HomeController extends Controller
         $keranjang->delete();
 
         return redirect()->back();
+    }
+
+    public function order(Request $request){
+        \DB::table('keranjang')->where('status','0')
+        ->update(['status'=>'1']);
+        return redirect()->back();
+    }
+
+    public function updateprofil(Request $request){
+        $datauser = User::find(Auth::user()->id);
+
+        $datauser->name = $request->nama2;
+        $datauser->alamat = $request->alamat2;
+        $datauser->email = $request->email2;
+        $datauser->wa = $request->no_hp2;
+        $datauser->bbm = $request->bbm2;
+        $datauser->pekerjaan = $request->pekerjaan2;
+        $datauser->save();
+
+        return redirect('profil');
     }
 
 }
