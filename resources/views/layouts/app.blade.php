@@ -42,7 +42,7 @@
 	<title></title>
 </head>
 <body>
-<img src="{{url('image/background.JPEG')}}" style="no-repeat center center fixed;position: fixed;width: 100%;height: 100%;background-size: cover;-webkit-filter: blur(1px);">
+<img src="{{url('image/background2.JPEG')}}" style="no-repeat center center fixed;position: fixed;width: 100%;height: 100%;background-size: cover;-webkit-filter: blur(1px);">
 <header class="main-header">
 </header>
 @yield('content')
