@@ -19,7 +19,6 @@
                 <td><b><center>Nama Barang</center></b></td>
                 <td><b><center>Harga</center></b></td>
                 <td><b><center>Jumlah Barang</center></b></td>
-                <td><b><center>Diskon</center></b></td>
                 <td><b><center>Total</center></b></td>
                 <td width="1%"><b><center>Pilihan</center></b></td>
               </tr>
@@ -30,7 +29,6 @@
                 <td>Jagung Manis</td>
                 <td>Rp. 1.000.000</td>
                 <td><center>1</center></td>
-                <td><center>10%</center></td>
                 <td>Rp. 900.000</td>
                 <td><button class="btn btn-sm btn-danger">Batal</button></td>
               </tr>

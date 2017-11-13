@@ -42,12 +42,10 @@
 	<title></title>
 </head>
 <body>
-<img src="{{url('image/background2.JPEG')}}" style="no-repeat center center fixed;position: fixed;width: 100%;height: 100%;background-size: cover;-webkit-filter: blur(1px);">
+<!-- <img src="{{url('image/background2.JPEG')}}" style="no-repeat center center fixed;position: fixed;width: 100%;height: 100%;background-size: cover;-webkit-filter: blur(1px);"> -->
 <header class="main-header">
 </header>
 @yield('content')
-<footer class="main-footer">
-</footer>
 
 
 <script src="{{ url('/plugins/jQuery/jquery-2.2.3.min.js') }}"></script>

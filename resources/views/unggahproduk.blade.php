@@ -24,12 +24,6 @@
           </div>
         </div>
         <div class="row">
-          <label for="harga" class="col-sm-4 control-label">Diskon (%)</label>
-          <div class="col-sm-7">
-            <input type="text" class="form-control" id="diskon" name="diskon" style="width:100%" required>
-          </div>
-        </div>
-        <div class="row">
           <label for="wa" class="col-sm-4 control-label">WA</label>
           <div class="col-sm-7">
             <input type="text" class="form-control" id="wa" name="wa" style="width:100%" required>

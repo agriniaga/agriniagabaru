@@ -24,22 +24,35 @@
         <div class="box" style="width:100%;border:none;">
           <div class="col-sm-7">
             <div class="box" style="border:0;margin-bottom:5px;">
-              <div style="padding-left:3%;padding-right:3%;padding-top:1%;padding-bottom:1%;">
-                <div class="row" style="margin-left:10px;margin-right:10px;">
-                  <p style="padding:none;"><h5>Jagung Manis Asli Palembang</h5>
-                  <h5 style="color:green">Palembang</h5>
-                  <h5 style="color:green">Pertanian</h5></p>
-                </div>
-                <div class="row" style="margin-left:10px;margin-right:10px;">
-                  <label class="pull-left"><h4>Rp. 4000,-/kg</h4></label>
-                  <label class="pull-right"><h4><b>Diskon 10%</b></h4></label>
-                </div>
+              <div>
+                <table border="2" style="width:100%;height:100%;">
+                  <tr>
+                    <td>
+                      <div class="row" style="margin-left:10px;margin-right:10px;">
+                        <p style="padding:none;"><h5>Jagung Manis Asli Palembang</h5>
+                        <h5 style="color:green">Palembang</h5>
+                        <h5 style="color:green">Pertanian</h5></p>
+                      </div>
+                      <div class="row" style="margin-left:10px;margin-right:10px;">
+                        <label class="pull-left"><h4>Rp. 4000,-/kg</h4></label>
+                      </div>
+                    </td>
+                  </tr>
+                </table>
               </div>
             </div>
           </div>
           <div class="col-sm-5">
             <div class="box" style="border:0;width: 250px;height: 135px;">
-              <img src="{{url('image/background.JPEG')}}" style="width:96%;height:93%;margin:2%;">
+              <table border="2" style="width:100%;height:100%;">
+                <tr>
+                  <td>
+                    <div class="">
+                      <img src="{{url('image/background.JPEG')}}" style="width: 250px;height: 130px;margin:2px;">
+                    </div>
+                  </td>
+                </tr>
+              </table>
             </div>
           </div>
         </div>
