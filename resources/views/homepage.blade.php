@@ -115,9 +115,24 @@
       </div>
   </div>
 
+
+
+  <div class="row" style="margin-top:30px;">
+    <div class="col-sm-10 col-sm-offset-1">
+      <center> Page <b style="color:green;">1</b> </center>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-10 col-sm-offset-1">
+      <center><button type="button" name="button" class="btn btn-sm btn-default">Prev</button> &nbsp;
+         <a href="#"  style="color:green;">1</a> <a href="#" style="color:green;">2</a> &nbsp;
+         <button type="button" name="button" class="btn btn-sm btn-default">Next</button> </center>
+    </div>
+  </div>
+
 </div>
 
-  <div class="row" style="margin-top:250px;">
+  <div class="row" style="margin-top:70px;">
     <div class="col-sm-2"></div>
     <div class="col-sm-4">
       <div class="col-sm-6">
