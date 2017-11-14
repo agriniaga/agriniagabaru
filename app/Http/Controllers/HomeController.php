@@ -54,4 +54,8 @@ class HomeController extends Controller
         return view('pemesanan');
     }
 
+    public function pembelian(){
+        return view('pembelian');
+    }
+
 }

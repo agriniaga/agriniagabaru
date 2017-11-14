@@ -56,7 +56,20 @@
     <!-- /.box-footer -->
   </form>
 </div>
+
+<div class="row" style="margin-top:100px;">
+  <div class="col-sm-4 col-sm-offset-1">
+    <div class="box">
+      <table border="2">
+        <tr>
+          <td>
+          <h5 style="color:green;margin:5px;">Untuk pembayaran via Agriniaga Silahkan Kirimkan Pembayaran Anda ke Nomor Rekening Agriniaga xxxxxxxxxxxxxxxxxxx atas nama Agriniaga</h5></td>
+        </tr>
+      </table>
+    </div>
   </div>
+</div>
+
 </div>
 
 @endsection

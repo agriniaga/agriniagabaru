@@ -25,10 +25,14 @@
             </a>
           </li>
           <li>
-            <a href="{{url('/belanja')}}" style="color:green;">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color:green;">
               Belanja
               <span class="pull-right-container"><small class="label pull-right bg-red">1</small></span>
             </a>
+            <ul class="dropdown-menu">
+              <li class="header"><a href="{{url('/belanja')}}">Keranjang</a></li>
+              <li><a href="{{url('/pembelian')}}">Pembelian</a></li>
+            </ul>
           </li>
           <li>
             <a href="{{url('/pemesanan')}}" style="color:green;">
