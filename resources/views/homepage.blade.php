@@ -11,102 +11,133 @@
   <div class="row">
   @include('layouts.menu')
   </div>
-	<div class="row" style="padding-top:30px">
-		<div div class="col-sm-2"></div>
-		<div div class="col-sm-8">
-        <div class="col-sm-12" style="height:40px">
-          <div class="box" style="width:100%;height:100%;padding:1px;border:0;">
-            <table border="2" style="width:100%;height:100%;">
-              <tr>
-                <td>
-                  <span class="fa fa-search" style="width:6%;padding-left:10px;padding-right:10px;margin-top:10px;"></span>
-                  <input type="text" style="border:none;width:30%;" placeholder="Cari Produk"> |
-                  <select style="border:none;width:25%;">
-                    <option style="display: none;" selected>Provinsi</option>
-                    <option>Sumatera Barat</option></select> |
-                  <select style="border:none;width:25%;">
-                    <option style="display: none;" selected>Kategori</option>
-                    <option>Pertanian</option>
-                  </select>
-                  <button class="btn btn-success" style="width:10%;margin-bottom:1px;">
-                    <span class="fa fa-search"></span>
-                  </button>
-                </td>
-              </tr>
-            </table>
-          </div>
-        </div>
-		</div>
-		<div class="col-sm-2"></div>
-	</div>
+  <div class="row" style="padding-top:30px;">
+    <div class="col-sm-5 col-md-5 col-xs-12 col-lg-5">
+      <div class="box" style="width:100%;height:100%;border:0;">
+        <table border="2" style="width:100%;height:100%;">
+          <tr>
+            <td>
+              <div class="col-md-1 col-sm-1 col-lg-1 col-xs-1" style="padding:0px;">
+                <button class="btn btn-default" style="width:100%;" disabled>
+                  <span class="fa fa-search"></span>                    
+                </button>              
+              </div>
+              <div class="col-md-3 col-sm-3 col-lg-3 col-xs-3">
+                <div class="row">
+                  <input type="text" style="border:none;width:100%;height:30px" placeholder="Cari Produk">               
+                </div>           
+              </div>
+              <div class="col-md-3 col-sm-3 col-lg-3 col-xs-3">
+                <select style="border:none;width:100%;;height:30px">
+                  <option style="display: none;" selected>Provinsi</option>
+                  <option>Sumatera Barat</option></select>            
+              </div>
+              <div class="col-md-3 col-sm-3 col-lg-3 col-xs-3">
+                <select style="border:none;width:100%;height:30px">
+                  <option style="display: none;" selected>Kategori</option>
+                  <option>Pertanian</option>
+                </select>                
+              </div>
+              <div class="col-md-2 col-sm-2 col-lg-2 col-xs-2" style="padding-right:0px;">
+                <button class="btn btn-success" style="width:100%;">
+                  <span class="fa fa-search"></span>
+                </button>                
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="col-sm-5">
 
-  <div class="row" style="margin-top:50px">
-      <div class="col-sm-3">
-        <div class="box" style="border:0;width: 250px;height: 270px;">
+    </div>
+  </div>
+
+  <div class="row" style="padding-top:20px">
+      <div class="col-sm-3 col-md-3 col-xs-6 col-lg-3">
+        <div class="box" style="border:0;width: 100%;height: 100%;">
           <table border="2" style="width:100%;height:100%;">
             <tr>
               <td>
                 <div>
                   <img src="{{url('image/background.JPEG')}}" style="width:96%;height:70%;margin:2%;">
                 </div>
-                <div class="" style="margin-left:5px;">
-                  <h5>Jagung Manis Asli Palembang</h5>
-                  <h5 style="color:green">Rp.4.000,-</h5>
-                  <a href="{{url('/login')}}" class="btn btn-sm btn-success">Pesan</a>
+                <div class="row" style="margin-left:1%;margin-top:5%">
+                  <span>Jagung Manis Asli Palembang</span>
+                </div>
+                <div class="row" style="margin-left:1%;margin-top:5%">
+                  <span style="color:green">Rp.4.000,-</span>
+                  <span class="pull-right-container"><small class="label pull-right bg-green" style="margin-right:10%">Verified</small></span>                
+                </div>
+                <div class="row" style="margin-left:1%;margin-top:5%">
+                  <a href="{{url('/belanja')}}" class="btn btn-sm btn-success" style="margin-bottom:1px">Pesan</a>                  
                 </div>
               </td>
             </tr>
           </table>
         </div>
       </div>
-      <div class="col-sm-3">
-        <div class="box" style="border:0;width: 250px;height: 270px;">
+      <div class="col-sm-3 col-md-3 col-xs-6 col-lg-3">
+        <div class="box" style="border:0;width: 100%;height: 100%;">
           <table border="2" style="width:100%;height:100%;">
             <tr>
               <td>
                 <div>
                   <img src="{{url('image/background.JPEG')}}" style="width:96%;height:70%;margin:2%;">
                 </div>
-                <div class="" style="margin-left:5px;">
-                  <h5>Jagung Manis Asli Palembang</h5>
-                  <h5 style="color:green">Rp.4.000,-</h5>
-                  <a href="{{url('/login')}}" class="btn btn-sm btn-success">Pesan</a>
+                <div class="row" style="margin-left:1%;margin-top:5%">
+                  <span>Jagung Manis Asli Palembang</span>
+                </div>
+                <div class="row" style="margin-left:1%;margin-top:5%">
+                  <span style="color:green">Rp.4.000,-</span>   
+                  <span class="pull-right-container"><small class="label pull-right bg-green" style="margin-right:10%">Verified</small></span>                
+                </div>
+                <div class="row" style="margin-left:1%;margin-top:5%">
+                  <a href="{{url('/belanja')}}" class="btn btn-sm btn-success" style="margin-bottom:1px">Pesan</a>                  
                 </div>
               </td>
             </tr>
           </table>
         </div>
       </div>
-      <div class="col-sm-3">
-        <div class="box" style="border:0;width: 250px;height: 270px;">
+      <div class="col-sm-3 col-md-3 col-xs-6 col-lg-3">
+        <div class="box" style="border:0;width: 100%;height: 100%;">
           <table border="2" style="width:100%;height:100%;">
             <tr>
               <td>
                 <div>
                   <img src="{{url('image/background.JPEG')}}" style="width:96%;height:70%;margin:2%;">
                 </div>
-                <div class="" style="margin-left:5px;">
-                  <h5>Jagung Manis Asli Palembang</h5>
-                  <h5 style="color:green">Rp.4.000,-</h5>
-                  <a href="{{url('/login')}}" class="btn btn-sm btn-success">Pesan</a>
+                <div class="row" style="margin-left:1%;margin-top:5%">
+                  <span>Jagung Manis Asli Palembang</span>
+                </div>
+                <div class="row" style="margin-left:1%;margin-top:5%">
+                  <span style="color:green">Rp.4.000,-</span>                  
+                </div>
+                <div class="row" style="margin-left:1%;margin-top:5%">
+                  <a href="{{url('/belanja')}}" class="btn btn-sm btn-success" style="margin-bottom:1px">Pesan</a>                  
                 </div>
               </td>
             </tr>
           </table>
         </div>
       </div>
-      <div class="col-sm-3">
-        <div class="box" style="border:0;width: 250px;height: 270px;">
+      <div class="col-sm-3 col-md-3 col-xs-6 col-lg-3">
+        <div class="box" style="border:0;width: 100%;height: 100%;">
           <table border="2" style="width:100%;height:100%;">
             <tr>
               <td>
                 <div>
                   <img src="{{url('image/background.JPEG')}}" style="width:96%;height:70%;margin:2%;">
                 </div>
-                <div class="" style="margin-left:5px;">
-                  <h5>Jagung Manis Asli Palembang</h5>
-                  <h5 style="color:green">Rp.4.000,-</h5>
-                  <a href="{{url('/login')}}" class="btn btn-sm btn-success">Pesan</a>
+                <div class="row" style="margin-left:1%;margin-top:5%">
+                  <span>Jagung Manis Asli Palembang</span>
+                </div>
+                <div class="row" style="margin-left:1%;margin-top:5%">
+                  <span style="color:green">Rp.4.000,-</span>                  
+                </div>
+                <div class="row" style="margin-left:1%;margin-top:5%">
+                  <a href="{{url('/belanja')}}" class="btn btn-sm btn-success" style="margin-bottom:1px">Pesan</a>                  
                 </div>
               </td>
             </tr>
@@ -115,15 +146,13 @@
       </div>
   </div>
 
-
-
   <div class="row" style="margin-top:30px;">
-    <div class="col-sm-10 col-sm-offset-1">
+    <div class="col-sm-10 col-sm-offset-1 col-md-10 col-xs-12 col-lg-10">
       <center> Page <b style="color:green;">1</b> </center>
     </div>
   </div>
   <div class="row">
-    <div class="col-sm-10 col-sm-offset-1">
+    <div class="col-sm-10 col-sm-offset-1 col-md-10 col-xs-12 col-lg-10">
       <center><button type="button" name="button" class="btn btn-sm btn-default">Prev</button> &nbsp;
          <a href="#"  style="color:green;">1</a> <a href="#" style="color:green;">2</a> &nbsp;
          <button type="button" name="button" class="btn btn-sm btn-default">Next</button> </center>
@@ -133,48 +162,6 @@
 </div>
 
   <div class="row" style="margin-top:70px;">
-    <div class="col-sm-2"></div>
-    <div class="col-sm-4">
-      <div class="col-sm-6">
-        <div>
-          <a href="" style="color:green;">Tips Jual Beli</a>
-        </div>
-        <div>
-          <a href="" style="color:green;">Pasang Iklan</a>
-        </div>
-        <div>
-          <a href="" style="color:green;">Sarat dan Ketentuan</a>
-        </div>
-      </div>
-      <div class="col-sm-6">
-        <div>
-          <a href="" style="color:green;">Tentang Kami</a>
-        </div>
-        <div>
-          <a href="" style="color:green;">Customer Care</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-0">
-    </div>
-    <div class="col-sm-4">
-      <div class="col-sm-6">
-        <div>
-          <img src="{{url('image/ig.png')}}" width="20px" height="20px"> | <a href="" style="color:black;">agriniaga</a>
-        </div>
-        <div>
-          <img src="{{url('image/twitter.png')}}" width="20px" height="20px"> | <a href="" style="color:black;">@agriniaga01</a>
-        </div>
-      </div>
-      <div class="col-sm-6">
-        <div>
-          <img src="{{url('image/fb.png')}}" width="20px" height="20px"> | <a href="" style="color:black;">Agriniaga</a>
-        </div>
-        <div>
-          <img src="{{url('image/youtube.png')}}" width="20px" height="20px"> | <a href="" style="color:black;">Agriniaga</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-2"></div>
+    @include('layouts.app2')
   </div>
 @endsection

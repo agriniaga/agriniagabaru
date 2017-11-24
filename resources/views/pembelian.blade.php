@@ -11,11 +11,11 @@
   <div class="row" style="margin-top:20px;">
     <div class="col-sm-10 col-sm-offset-1">
       <div class="box" style="border:none">
-        <div class="row">
+        <div class="row" style="width:100%">
           <h4><center>Daftar Pembelian Produk</center></h4>
         </div>
-        <div class="row">
-          <table class="table table-striped" style="margin-left:20px;width:940px;">
+        <div class="row" style="width:100%">
+          <table class="table table-striped" style="margin:2%;width:100%;display:block;overflow-x:auto">
             <thead>
               <tr>
                 <td width="1%" rowspan="2"><center><b>No</b></td>

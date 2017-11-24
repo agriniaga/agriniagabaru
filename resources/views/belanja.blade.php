@@ -10,9 +10,9 @@
   </div>
   <div class="row" style="margin-top:20px;">
     <form method="">
-      <div class="col-sm-7 col-sm-offset-1">
+      <div class="col-sm-7 col-sm-offset-1 col-md-7 col-lg-7 col-xs-12">
         <div class="box" style="border:none;width:100%;height:100%;">
-          <table class="table table-striped">
+          <table class="table table-striped" style="position:relative;display:block;overflow-x:auto">
             <thead>
               <tr>
                 <td width="1%"><b><center>No</center></b></td>
@@ -28,20 +28,23 @@
                 <td><center>1</center></td>
                 <td>Jagung Manis</td>
                 <td>Rp. 1.000.000</td>
-                <td><center>1</center></td>
-                <td>Rp. 900.000</td>
+                <td>
+                  <div class="row"><center>1</center></div>
+                  <div class="row"><center><button class="btn btn-sm btn-success">+</button> <button class="btn btn-sm btn-danger">-</button></center></div>
+                </td>
+                <td>Rp. 1.000.000</td>
                 <td><button class="btn btn-sm btn-danger">Batal</button></td>
               </tr>
             </tbody>
           </table>
         </div>
       </div>
-      <div class="col-sm-3">
+      <div class="col-sm-3 col-md-3 col-lg-3 col-xs-12">
         <div class="box" style="border:none;width:100%;height:100%;">
-          <div style="padding-top:2px;">
+          <div>
             <center><h4 style="color:red;">Pembayaran <span class="fa fa-cart-arrow-down"></span></h4></center>
           </div>
-          <table class="table table-striped">
+          <table class="table table-striped" style="display:block;overflow-x:auto">
             <tr>
               <td>Total Belanja</td>
               <td>:</td>
@@ -57,8 +60,8 @@
   </form>
 </div>
 
-<div class="row" style="margin-top:100px;">
-  <div class="col-sm-4 col-sm-offset-1">
+<div class="row" style="margin-top:50px;">
+  <div class="col-sm-4 col-sm-offset-1 col-md-4 col-lg-4 col-xs-12">
     <div class="box">
       <table border="2">
         <tr>

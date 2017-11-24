@@ -1,5 +1,5 @@
 
-    <div class="col-sm-9 col-sm-offset-2" style="font-size:20px;">
+    <div class="col-sm-9 col-md-offset-2 col-md-9 col-xs-12 col-lg-9" style="font-size:100%;">
       <b style="color:green;" class="pull-right">
       <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
@@ -7,10 +7,10 @@
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color:green;">
               Akun
             </a>
-            <ul class="dropdown-menu">
+            <ul class="dropdown-menu" style="left:0px">
               <li class="header"><a href="{{url('/profil')}}">Profil</a></li>
               <li><a href="{{url('/produk')}}">Produk Saya</a></li>
-              <li><a href="#myModal" data-toggle="modal">Buka Toko</a></li>
+              <li><a href="{{url('/bukatoko')}}">Buka Toko</a></li>
               <li><a href="#">Keluar</a></li>
             </ul>
           </li>
@@ -29,7 +29,7 @@
               Belanja
               <span class="pull-right-container"><small class="label pull-right bg-red">1</small></span>
             </a>
-            <ul class="dropdown-menu">
+            <ul class="dropdown-menu" style="left:0px">
               <li class="header"><a href="{{url('/belanja')}}">Keranjang</a></li>
               <li><a href="{{url('/pembelian')}}">Pembelian</a></li>
             </ul>
@@ -49,86 +49,4 @@
         </ul>
       </div>
       </b>
-    </div>
-
-    <div id="myModal" class="modal fade modal-success" role="dialog">
-        <div class="modal-dialog">
-            <!-- konten modal-->
-            <div class="modal-content">
-                <!-- heading modal -->
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title"><center>Buka Toko</center></h4>
-                </div>
-                <!-- body modal -->
-                <form action="" method="post" class="form-horizontal">
-                    <div class="modal-body">
-                            <table class="table">
-                                <tr>
-                                    <td width="30%">Nama Toko</td>
-                                    <td width="2%">:</td>
-                                    <td><input type="text" class="form-control" id="nama_toko" name="nama_toko"></td>
-                                </tr>
-                                <tr>
-                                    <td>Alamat Toko</td>
-                                    <td>:</td>
-                                    <td><textarea class="form-control" id="alamat_toko" name="alamat_toko"></textarea>
-                                </tr>
-                                <tr>
-                                    <td>NPWP</td>
-                                    <td>:</td>
-                                    <td><input type="text" class="form-control" id="npwp" name="npwp"></td>
-                                </tr>
-                                <tr>
-                                    <td>No KTP Pemilik</td>
-                                    <td>:</td>
-                                    <td><input type="text" class="form-control" id="ktp" name="ktp"></td>
-                                </tr>
-                                <tr>
-                                    <td>No Telp</td>
-                                    <td>:</td>
-                                    <td><input type="text" class="form-control" id="telp" name="telp"></td>
-                                </tr>
-                                <tr>
-                                    <td>No HP</td>
-                                    <td>:</td>
-                                    <td><input type="text" class="form-control" id="hp" name="hp"></td>
-                                </tr>
-                                <tr>
-                                    <td>Email</td>
-                                    <td>:</td>
-                                    <td><input type="email" class="form-control" id="email" name="email"></td>
-                                </tr>
-                                <tr>
-                                    <td>Kategori Toko</td>
-                                    <td>:</td>
-                                    <td>
-                                      <select class="form-control" id="toko" name="toko">
-                                        <option>Ruko</option>
-                                        <option>Warteg</option>
-                                      </select>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Foto</td>
-                                    <td>:</td>
-                                    <td>
-                                    <div>
-                                      <img src="{{url('image/background.JPEG')}}" style="width:200px;">
-                                    </div><br>
-                                    <div>
-                                      <input type="file" class="form-control">
-                                    </div>
-                                    </td>
-                                </tr>
-                            </table>
-                    </div>
-                <!-- footer modal -->
-                    <div class="modal-footer">
-                        <button type="submit" name="submit" class="btn btn-default pull-right">Kirim</button>
-                    </div>
-                        {{ csrf_field() }}
-                </form>
-            </div>
-        </div>
     </div>

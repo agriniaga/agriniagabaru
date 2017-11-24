@@ -58,4 +58,13 @@ class HomeController extends Controller
         return view('pembelian');
     }
 
+    public function bukatoko(){
+        return view('bukatoko');
+    }
+
+    public function editproduk(){
+        return view('editproduk');
+    }
+
+
 }

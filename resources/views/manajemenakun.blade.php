@@ -23,7 +23,7 @@
 
         </div>
         <div class="box-body">
-          <table class="table table-striped table-bordered">
+          <table class="table table-striped table-bordered" style="display:block;overflow-x:auto">
             <thead>
               <th width="1%"><center>No</th>
               <th><center>Username</th>

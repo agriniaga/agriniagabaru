@@ -28,5 +28,7 @@ Route::resource('/profil', 'HomeController@profil');
 Route::resource('/produk', 'HomeController@produk');
 Route::resource('/pemesanan', 'HomeController@pemesanan');
 Route::resource('/pembelian', 'HomeController@pembelian');
+Route::resource('/bukatoko', 'HomeController@bukatoko');
+Route::resource('/editproduk', 'HomeController@editproduk');
 
 Route::resource('/manajemenakun', 'AdminController@manajemenakun');

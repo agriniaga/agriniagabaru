@@ -1,5 +1,5 @@
 
-    <div class="col-sm-4 col-md-offset-2">
+    <div class="col-sm-4 col-md-offset-2 col-md-4 col-xs-6 col-lg-4">
       <div class="col-sm-6">
         <div>
           <a href="{{url('/tips')}}" style="color:green;">Tips Jual Beli</a>
@@ -20,9 +20,7 @@
         </div>        
       </div>
     </div>
-    <div class="col-sm-0">
-    </div>
-    <div class="col-sm-4">
+    <div class="col-sm-4 col-md-4 col-xs-6 col-lg-4">
       <div class="col-sm-6">
         <div>
           <img src="{{url('image/ig.png')}}" width="20px" height="20px"> | <a href="" style="color:black;">agriniaga</a>
@@ -40,4 +38,3 @@
         </div>        
       </div>      
     </div>
-    <div class="col-sm-2"></div>

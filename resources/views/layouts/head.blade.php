@@ -1,26 +1,40 @@
 
-    <div class="col-md-4 col-md-offset-1">
+    <div class="col-md-4 col-md-offset-1 col-sm-4 col-lg-4 col-xs-12">
       <div style="width:100%;text-align:left">
           <img src="{{url('image/nama2.png')}}" style="width: 100%;height: 100%;position:relative;">
       </div>
     </div>
-    <div class="col-md-5 col-md-offset-1">
-      <div class="box" style="width:100%;height:100%;margin-top:25%;border:0;">
-        <table border="2">
+    <div class="col-md-6 col-sm-6 col-lg-6 col-xs-12">
+      <div class="box" style="width:100%;height:100%;margin-top:20%;border:0;">
+        <table border="2" style="width:100%;height:100%;">
           <tr>
             <td>
-              <span class="fa fa-search" style="width:5%;padding-left:10px;padding-right:10px;margin-top:10px;"></span>
-              <input type="text" style="border:none;width:29%;" placeholder="Cari Produk"> |
-              <select style="border:none;width:25%;">
-                <option style="display: none;" selected>Provinsi</option>
-                <option>Sumatera Barat</option></select> |
-              <select style="border:none;width:25%;">
-                <option style="display: none;" selected>Kategori</option>
-                <option>Pertanian</option>
-              </select>
-              <button class="btn btn-success" style="width:10%; margin-bottom:1px;">
-                <span class="fa fa-search"></span>
-              </button>
+              <div class="col-md-1 col-sm-1 col-lg-1 col-xs-1" style="padding:0px;">
+                <button class="btn btn-default" style="width:100%;" disabled>
+                  <span class="fa fa-search"></span>                    
+                </button>              
+              </div>
+              <div class="col-md-3 col-sm-3 col-lg-3 col-xs-3">
+                <div class="row">
+                  <input type="text" style="border:none;width:100%;height:30px" placeholder="Cari Produk">               
+                </div>           
+              </div>
+              <div class="col-md-3 col-sm-3 col-lg-3 col-xs-3">
+                <select style="border:none;width:100%;;height:30px">
+                  <option style="display: none;" selected>Provinsi</option>
+                  <option>Sumatera Barat</option></select>            
+              </div>
+              <div class="col-md-3 col-sm-3 col-lg-3 col-xs-3">
+                <select style="border:none;width:100%;height:30px">
+                  <option style="display: none;" selected>Kategori</option>
+                  <option>Pertanian</option>
+                </select>                
+              </div>
+              <div class="col-md-2 col-sm-2 col-lg-2 col-xs-2" style="padding-right:0px;">
+                <button class="btn btn-success" style="width:100%;">
+                  <span class="fa fa-search"></span>
+                </button>                
+              </div>
             </td>
           </tr>
         </table>

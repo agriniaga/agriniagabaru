@@ -9,34 +9,38 @@
     <hr style="width:80%; background-color: green; height: 1px; border: 0;position:relative;">
   </div>
   <div class="row">
-    <div class="col-sm-9 col-sm-offset-2" style="font-size:20px;">
+    <div class="col-sm-9 col-sm-offset-2 col-md-9 col-xs-11 col-lg-9"style="font-size:100%;">
       <b style="color:green;" class="pull-right">
         <a href="{{url('/')}}" style="color:green;">Agriniaga</a> |
         <a href="{{url('/register')}}" style="color:green;">Daftar</a> |
         <a href="{{url('/login')}}" style="color:black;">Masuk</a></b>
     </div>
   </div>
-	<div class="row" style="padding-top:60px">
-		<div div class="col-sm-3"></div>
-		<div div class="col-sm-5">
-			<div class="form-group" style="margin-top:40px;">
-              	<label for="username" class="col-sm-4 control-label">Nama Pengguna</label>
-              	<div class="col-sm-7">
-                	<input type="text" class="form-control" id="username" name="username" style="width:80%;" required>
-				</div>
-			</div>
-			<div class="form-group" style="padding-top:40px;">
-              	<label for="password" class="col-sm-4 control-label">Password</label>
-              	<div class="col-sm-7">
-                	<input type="password" class="form-control" id="password" name="password" style="width:80%;" required>
-				</div>
-			</div><br><br>
-			<div><center>
-				<button class="btn btn-success btn-sm">MASUK</button></center>
-			</div>
-		</div>
-		<div class="col-sm-4"></div>
-	</div>
+  <div class="row" style="padding-top:20px;">
+    <div div class="col-sm-6 col-sm-offset-3 col-md-5 col-lg-5 col-xs-12">
+      <div class="box">
+        <div class="form-group col-xs-12" style="margin-top:40px;">
+          <div class="col-sm-4 col-md-4 col-lg-4 col-xs-4">
+            <label for="username" class=" control-label">Nama Pengguna</label>          
+          </div>
+          <div class="col-sm-7 col-md-7 col-lg-7 col-xs-8">
+            <input type="text" class="form-control" id="username" name="username" style="width:80%;" required>
+          </div>
+        </div>
+        <div class="form-group col-xs-12">
+          <div class="col-sm-4 col-md-4 col-lg-4 col-xs-4">
+            <label for="password" class="control-label">Password</label>          
+          </div>
+          <div class="col-sm-7 col-md-7 col-lg-7 col-xs-8">
+            <input type="password" class="form-control" id="password" name="password" style="width:80%;" required>
+          </div>
+        </div><br><br>
+        <div><center>
+          <button class="btn btn-success btn-sm" style="margin-bottom:1%;">MASUK</button></center>
+        </div>        
+      </div>
+    </div>
+  </div>
 </div>
 
   <div class="row" style="margin-top:150px;">
