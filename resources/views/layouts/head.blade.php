@@ -1,7 +1,7 @@
 
     <div class="col-md-4 col-md-offset-1 col-sm-4 col-lg-4 col-xs-12">
       <div style="width:100%;text-align:left">
-          <img src="{{url('image/nama2.png')}}" style="width: 100%;height: 100%;position:relative;">
+          <a href="{{url('/homepage')}}"><img src="{{url('image/nama2.png')}}" style="width: 100%;height: 100%;position:relative;"></a>
       </div>
     </div>
     <div class="col-md-6 col-sm-6 col-lg-6 col-xs-12">

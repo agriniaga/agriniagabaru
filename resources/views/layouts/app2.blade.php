@@ -23,18 +23,18 @@
     <div class="col-sm-4 col-md-4 col-xs-6 col-lg-4">
       <div class="col-sm-6">
         <div>
-          <img src="{{url('image/ig.png')}}" width="20px" height="20px"> | <a href="" style="color:black;">agriniaga</a>
+          <img src="{{url('image/ig.png')}}" width="20px" height="20px"> | <a href="https://www.instagram.com/agriniaga/" style="color:black;">agriniaga</a>
         </div>
         <div>
-          <img src="{{url('image/twitter.png')}}" width="20px" height="20px"> | <a href="" style="color:black;">@agriniaga01</a>
+          <img src="{{url('image/twitter.png')}}" width="20px" height="20px"> | <a href="https://twitter.com/Agriniaga01" style="color:black;">@agriniaga01</a>
         </div>      
       </div>
       <div class="col-sm-6">
         <div>
-          <img src="{{url('image/fb.png')}}" width="20px" height="20px"> | <a href="" style="color:black;">Agriniaga</a>
+          <img src="{{url('image/fb.png')}}" width="20px" height="20px"> | <a href="https://www.facebook.com/agriniaga.agriniaga.9" style="color:black;">Agriniaga</a>
         </div>
         <div>
-          <img src="{{url('image/youtube.png')}}" width="20px" height="20px"> | <a href="" style="color:black;">Agriniaga</a>
+          <img src="{{url('image/youtube.png')}}" width="20px" height="20px"> | <a href="https://www.youtube.com/channel/UCNvh0dhfXTeewpGKBh7j-TQ" style="color:black;">Agriniaga</a>
         </div>        
       </div>      
     </div>

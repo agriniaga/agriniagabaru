@@ -4,7 +4,7 @@
 <div class="container">
   <div class="row">
     <div style="width:100%;text-align:center">
-        <img src="{{url('image/nama2.png')}}" style="width: 30%;height: 20%;position:relative;">
+        <a href="{{url('/')}}"><img src="{{url('image/nama2.png')}}" style="width: 30%;height: 20%;position:relative;"></a>
     </div>
     <hr style="width:80%; background-color: green; height: 1px; border: 0;position:relative;">
   </div>
