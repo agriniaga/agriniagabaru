@@ -9,6 +9,9 @@
     @include('layouts.menu')
   </div>
   <div class="row" style="margin-top:20px;">
+    <h4><center><b>Buka Toko</b></center></h4>
+  </div>
+  <div class="row">
     <form method="">
       <div class="col-sm-10 col-sm-offset-1 col-md-10 col-lg-10 col-xs-12">
         <div class="box" style="border:none;width:100%">
@@ -16,37 +19,35 @@
             <div class="col-sm-8 col-md-8 col-lg-8 col-xs-12">
               <div class="box" style="border:none;margin:5%">
                 <div class="row">
-                  <label for="nama_produk" class="col-sm-3 col-md-3 col-lg-3 col-xs-4 control-label">Nama Produk</label>
+                  <label class="col-sm-3 col-md-3 col-lg-3 col-xs-4 control-label">Nama Toko</label>
                   <div class="col-sm-8 col-md-8 col-lg-8 col-xs-7">
-                    <input type="text" class="form-control" id="nama_produk" name="nama_produk" style="width:100%" required>
+                    <input type="text" class="form-control" id="nama_toko" name="nama_toko" style="width:100%" required>
                   </div>
                 </div>
                 <div class="row">
-                  <label for="harga" class="col-sm-3 col-md-3 col-lg-3 col-xs-4 control-label">Harga</label>
+                  <label class="col-sm-3 col-md-3 col-lg-3 col-xs-4 control-label">Alamat Toko</label>
                   <div class="col-sm-8 col-md-8 col-lg-8 col-xs-7">
-                    <input type="text" class="form-control" id="harga" name="harga" style="width:100%" required>
+                    <input type="text" class="form-control" id="alamat_toko" name="alamat_toko" style="width:100%" required>
                   </div>
                 </div>
                 <div class="row">
-                  <label for="kategori" class="col-sm-3 col-md-3 col-lg-3 col-xs-4 control-label">Kategori</label>
+                  <label class="col-sm-3 col-md-3 col-lg-3 col-xs-4 control-label">NPWP</label>
                   <div class="col-sm-8 col-md-8 col-lg-8 col-xs-7">
-                    <select id="kategori" class="form-control" style="width:100%">
-                      <option value="pertanian">Pertanian</option>
+                    <input type="text" class="form-control" id="npwp" name="npwp" style="width:100%" required>
+                  </div>
+                </div>
+                <div class="row">
+                  <label class="col-sm-3 col-md-3 col-lg-3 col-xs-4 control-label">No. KTP</label>
+                  <div class="col-sm-8 col-md-8 col-lg-8 col-xs-7">
+                    <input type="text" class="form-control" id="no_ktp" name="no_ktp" style="width:100%" required>
+                  </div>
+                </div>
+                <div class="row">
+                  <label for="kategori" class="col-sm-3 col-md-3 col-lg-3 col-xs-4 control-label">Kategori Toko</label>
+                  <div class="col-sm-8 col-md-8 col-lg-8 col-xs-7">
+                    <select id="kategori_toko" class="form-control" style="width:100%">
+                      <option value="pertanian">Ruko</option>
                     </select>
-                  </div>
-                </div>
-                <div class="row">
-                  <label for="provinsi" class="col-sm-3 col-md-3 col-lg-3 col-xs-4 control-label">Provinsi</label>
-                  <div class="col-sm-8 col-md-8 col-lg-8 col-xs-7">
-                    <select id="provinsi" class="form-control" style="width:100%">
-                      <option value="Sumatera Barat">Sumatera Barat</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="row">
-                  <label for="kategori" class="col-sm-3 col-md-3 col-lg-3 col-xs-4 control-label">Deskripsi</label>
-                  <div class="col-sm-8 col-md-8 col-lg-8 col-xs-7">
-                    <textarea class="form-control" style="width:100%"></textarea>
                   </div>
                 </div>
                 
@@ -65,7 +66,7 @@
           </div>
           <div class="row">
             <div class="col-sm-1 col-md-1 col-lg-1 col-xs-7 col-md-offset-5 col-xs-offset-5">
-              <button type="submit" name="submit" class="btn btn-success" style="margin-bottom:5%;align:center;">Unggah</button>               
+              <button type="submit" name="submit" class="btn btn-success" style="margin-bottom:5%;align:center;">Buka Toko</button>               
             </div>             
           </div>
         </div>
@@ -78,6 +79,4 @@
   </div>
 </div>
 
-<div class="row" style="margin-top:150px;">
-    @include('layouts.app2')
-</div>
+@endsection

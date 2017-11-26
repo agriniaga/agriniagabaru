@@ -17,55 +17,41 @@
               <div class="box" style="border:none">
                 <div style="padding:10px;">
                   <div class="row">
-                    <center><h4><b>Profil</b></h4></center>
+                    <center><h4><b>Edit Produk</b></h4></center>
                   </div>
                     <hr style="margin-top: 0px;">
                   <div class="row" style="margin-bottom: 5px;">
-                    <label for="nama2" class="col-sm-2 col-md-2 col-lg-2 col-xs-4 control-label">Nama</label>
+                    <label class="col-sm-2 col-md-2 col-lg-2 col-xs-4 control-label">Nama Produk</label>
                     <div class="col-sm-10 col-md-10 col-lg-10 col-xs-8">
-                      <input type="text" class="form-control" id="nama2" name="nama2" style="width:100%;border:none;" required>
+                      <input type="text" class="form-control" id="nama_produk" name="nama_produk" style="width:100%;border:none;" required>
                     </div>
                   </div>
                   <div class="row" style="margin-bottom: 5px;">
-                    <label for="alamat2" class="col-sm-2 col-md-2 col-lg-2 col-xs-4 control-label">Alamat</label>
+                    <label class="col-sm-2 col-md-2 col-lg-2 col-xs-4 control-label">Harga</label>
                     <div class="col-sm-10 col-md-10 col-lg-10 col-xs-8">
-                      <input type="text" class="form-control" id="alamat2" name="alamat2" style="width:100%;border:none;" required>
+                      <input type="text" class="form-control" id="harga" name="harga" style="width:100%;border:none;" required>
                     </div>
                   </div>
                   <div class="row" style="margin-bottom: 5px;">
-                    <label for="email2" class="col-sm-2 col-md-2 col-lg-2 col-xs-4 control-label">Email</label>
+                    <label class="col-sm-2 col-md-2 col-lg-2 col-xs-4 control-label">Kategori</label>
                     <div class="col-sm-10 col-md-10 col-lg-10 col-xs-8">
-                      <input type="email" class="form-control" id="email2" name="email2" style="width:100%;border:none;" required>
+                      <select id="kategori2" name="kategori2" class="form-control" style="width:100%;border:none;" required>
+                        <option value="pertanian">Pertanian</option>
+                      </select>
                     </div>
                   </div>
                   <div class="row" style="margin-bottom: 5px;">
-                    <label for="no_hp2" class="col-sm-2 col-md-2 col-lg-2 col-xs-4 control-label">No Hp</label>
+                    <label class="col-sm-2 col-md-2 col-lg-2 col-xs-4 control-label">Provinsi</label>
                     <div class="col-sm-10 col-md-10 col-lg-10 col-xs-8">
-                      <input type="text" class="form-control" id="no_hp2" name="no_hp2" style="width:100%;border:none;" required>
+                      <select id="provinsi2" name="provinsi2" class="form-control" style="width:100%;border:none;" required>
+                        <option value="sumbar">Sumatera Barat</option>
+                      </select>
                     </div>
                   </div>
                   <div class="row" style="margin-bottom: 5px;">
-                    <label for="no_hp2" class="col-sm-2 col-md-2 col-lg-2 col-xs-4 control-label">BBM</label>
+                    <label class="col-sm-2 col-md-2 col-lg-2 col-xs-4 control-label">Deskripsi</label>
                     <div class="col-sm-10 col-md-10 col-lg-10 col-xs-8">
-                      <input type="text" class="form-control" id="bbm" name="bbm" style="width:100%;border:none;" required>
-                    </div>
-                  </div>
-                  <div class="row" style="margin-bottom: 5px;">
-                    <label for="pekerjaan" class="col-sm-2 col-md-2 col-lg-2 col-xs-4 control-label">Pekerjaan</label>
-                    <div class="col-sm-10 col-md-10 col-lg-10 col-xs-8">
-                      <input type="text" class="form-control" id="pekerjaan" name="pekerjaan" style="width:100%;border:none;" required>
-                    </div>
-                  </div>
-                  <div class="row" style="margin-bottom: 5px;">
-                    <label for="pekerjaan" class="col-sm-2 col-md-2 col-lg-2 col-xs-4 control-label">Toko</label>
-                    <div class="col-sm-10 col-md-10 col-lg-10 col-xs-8">
-                      <input type="text" class="form-control" id="toko" name="toko" style="width:100%;border:none;" required>
-                    </div>
-                  </div>
-                  <div class="row" style="margin-bottom: 5px;">
-                    <label for="pekerjaan" class="col-sm-2 col-md-2 col-lg-2 col-xs-4 control-label">Status</label>
-                    <div class="col-sm-10 col-md-10 col-lg-10 col-xs-8">
-                      <span><small class="label bg-green" style="margin-right:10%">Verified</small></span> <span><small class="label bg-red" style="margin-right:10%">Waiting</small></span>                      
+                      <textarea class="form-control" id="deskripsi" name="deskripsi" style="width:100%;border:none;" required></textarea>
                     </div>
                   </div>
                 </div>

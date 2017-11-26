@@ -4,10 +4,7 @@
 <div class="container">
   <div class="row">
     <div style="width:100%;text-align:center">
-        <img src="{{url('image/nama.png')}}" style="width: 20%;height: 20%;position:relative;">
-    </div>
-    <div style="width:100%;text-align:center">
-        <img src="{{url('image/jargon.png')}}" style="width: 30%;height: 30%;position:relative;">
+        <a href="{{url('/homepage')}}"><img src="{{url('image/nama2.png')}}" style="width: 30%;height: 20%;position:relative;"></a>
     </div>
     <hr style="width:80%; background-color: green; height: 1px; border: 0;position:relative;">
   </div>
@@ -26,7 +23,7 @@
 
         </div>
         <div class="box-body">
-          <table class="table table-striped table-bordered">
+          <table class="table table-striped table-bordered" style="display:block;overflow-x:auto">
             <thead>
               <th width="1%"><center>No</th>
               <th><center>Username</th>

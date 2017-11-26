@@ -11,9 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 //Auth
 Auth::routes();
@@ -21,14 +21,14 @@ Auth::routes();
 //Authenticated
 Route::get('/homepage', 'HomeController@homepage');
 
-//Guest
-Route::get('/tips', 'guestController@tips');
-Route::get('/syarat', 'guestController@syarat');
-
 //pencarian
 Route::get('/pencarian', function(){
 	return redirect('/homepage');
 });
+//Guest
+Route::get('/tips', 'guestController@tips');
+Route::get('/syarat', 'guestController@syarat');
+
 Route::get('/pencarian/{provinsi}/{kategori}/{nama_produk}','produkController@searchWithName');
 Route::get('/pencarian/{provinsi}/{kategori}','produkController@searchWithoutName');
 Route::post('/produk/search', 'produkController@produkSearch');
@@ -44,5 +44,8 @@ Route::resource('/unggahproduk', 'HomeController@unggahproduk');
 Route::resource('/profil', 'HomeController@profil');
 Route::resource('/produk', 'HomeController@produk');
 Route::resource('/pemesanan', 'HomeController@pemesanan');
+Route::resource('/pembelian', 'HomeController@pembelian');
+Route::resource('/bukatoko', 'HomeController@bukatoko');
+Route::resource('/editproduk', 'HomeController@editproduk');
 
 Route::resource('/manajemenakun', 'AdminController@manajemenakun');
